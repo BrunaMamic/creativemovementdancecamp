@@ -1,0 +1,41 @@
+.mainWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 60px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mainTitle {
+  font-size: 110px;
+  font-family: var(--spartan);
+  letter-spacing: -10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1r);
+  gap: 30px;
+  justify-items: center;
+}
+
+.empty {
+  width: 100%;
+  height: 100%;
+}
