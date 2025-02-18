@@ -1,0 +1,98 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.rowWrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.firstRow,
+.secondRow {
+  display: flex;
+  font-family: var(--sans);
+  font-size: 40px;
+  font-weight: 700;
+  width: max-content;
+  gap: 15px;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: var(--white);
+}
+
+.firstRow .element:nth-child(1),
+.secondRow .element:nth-child(1),
+.firstRow .element:nth-child(7),
+.secondRow .element:nth-child(7) {
+  background-color: var(--blue);
+}
+
+.firstRow .element:nth-child(2),
+.secondRow .element:nth-child(2),
+.firstRow .element:nth-child(8),
+.secondRow .element:nth-child(8) {
+  background-color: var(--yellow);
+}
+
+.firstRow .element:nth-child(3),
+.secondRow .element:nth-child(3),
+.firstRow .element:nth-child(9),
+.secondRow .element:nth-child(9) {
+  background-color: var(--black);
+}
+
+.firstRow .element:nth-child(4),
+.secondRow .element:nth-child(4),
+.firstRow .element:nth-child(10),
+.secondRow .element:nth-child(10) {
+  background-color: var(--yellow);
+}
+
+.firstRow .element:nth-child(5),
+.secondRow .element:nth-child(5),
+.firstRow .element:nth-child(11),
+.secondRow .element:nth-child(11) {
+  background-color: var(--blue);
+}
+
+.firstRow .element:nth-child(6),
+.secondRow .element:nth-child(6),
+.firstRow .element:nth-child(12),
+.secondRow .element:nth-child(12) {
+  background-color: var(--black);
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.firstRow {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.secondRow {
+  animation: scrollRight 20s linear infinite;
+}
