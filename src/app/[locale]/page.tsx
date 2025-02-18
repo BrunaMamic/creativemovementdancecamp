@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <Hero2 />
-      {/* <Hero /> */}
+
       <TextSectionV2 />
       <InfiniteSlider />
-      {/* <TextSection /> */}
+
       <Lineup />
       <Schedule />
     </>
