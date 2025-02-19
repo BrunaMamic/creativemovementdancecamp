@@ -36,9 +36,9 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
-  const locale = params.locale;
+  const { locale } = await params;
 
   if (!routing.locales.includes(locale as "en" | "hr")) {
     notFound();
