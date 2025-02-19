@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
-  output: "export",
   reactStrictMode: true,
   basePath: "/creativemovementdancecamp",
 };

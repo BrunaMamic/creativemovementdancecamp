@@ -26,8 +26,20 @@
 
   .title {
     font-family: var(--spartan);
-    font-size: 120px;
-    letter-spacing: -10px;
+    font-weight: 700;
+    letter-spacing: -2px;
+
+    width: fit-content;
+
+    display: inline-block;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    transform: skew(-5deg);
+    display: inline-block;
   }
 
   .underTitle {

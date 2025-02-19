@@ -1,5 +1,6 @@
+import { Acordion } from "@/components/acordion";
 import { Hero2 } from "@/components/hero2";
-import { InfiniteSlider } from "@/components/infiniteSlider";
+// import { InfiniteSlider } from "@/components/infiniteSlider";
 import { Lineup } from "@/components/lineup";
 import { Schedule } from "@/components/schedule";
 // import { TextSection } from "@/components/textSection";
@@ -11,10 +12,11 @@ export default function Home() {
       <Hero2 />
 
       <TextSectionV2 />
-      <InfiniteSlider />
+      {/* <InfiniteSlider /> */}
 
       <Lineup />
       <Schedule />
+      <Acordion />
     </>
   );
 }

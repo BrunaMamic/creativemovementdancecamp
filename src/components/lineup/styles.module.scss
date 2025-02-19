@@ -12,7 +12,6 @@
   width: 100%;
   max-width: 1440px;
   height: 100%;
-  padding: 0 60px;
 
   position: relative;
 
@@ -22,9 +21,21 @@
 }
 
 .mainTitle {
-  font-size: 110px;
+  width: fit-content;
+  font-size: 70px;
   font-family: var(--spartan);
-  letter-spacing: -10px;
+  font-weight: 700;
+  letter-spacing: -2px;
+
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  transform: skew(-5deg);
+  display: inline-block;
 }
 
 .grid {
