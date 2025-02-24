@@ -14,14 +14,16 @@
     "element6": "CREATIVE ADULTS"
   },
   "textSection": {
-    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remainluding versions of Lorem Ipsum.",
+    "text": "“Be open minded, take risks and push your boundaries! We can't wait to see you there and be part of this incredible journey together!”  -says Monika.",
     "text2": "WHERE CREATIVITY MEETS MOVEMENT"
   },
   "lineup": {
+    "button": "CLICK TO READ MORE",
     "mainTitle": "CREATIVE LINEUP",
     "card1": {
       "name": "Ana Hazler ",
-      "description": "is a dynamic force in dance. A Croatian-born professional dancer, choreographer and teacher, based in Amsterdam since 2009. A graduate of the 'School of the Arts' Amsterdam, with an internship on Broadway in New York. Ana has danced, performed and taught worldwide—from Dubai to Senegal—and her choreography has appeared in music videos and commercials. As a seasoned judge, she has evaluated over 100 dance competitions, including European and World Championships. She founded Dutch Monsters to nurture dance talent across Europe and also runs Dansstudio Balance in Haarlem. Beyond dance, she holds a “Master’s in International Business Management”, proving her versatility both on and off the stage."
+      "style": "HEELS & MODERN",
+      "description": "s a dynamic force in dance. A Croatian-born professional dancer, choreographer and teacher, based in Amsterdam since 2009. A graduate of the 'School of the Arts' Amsterdam, with an internship on Broadway in New York. Ana has danced, performed and taught worldwide—from Dubai to Senegal—and her choreography has appeared in music videos and commercials. As a seasoned judge, she has evaluated over 100 dance competitions, including European and World Championships. She founded Dutch Monsters to nurture dance talent across Europe and also runs Dansstudio Balance in Haarlem. Beyond dance, she holds a “Master’s in International Business Management”, proving her versatility both on and off the stage."
     }
   },
   "schedule": {

@@ -8,10 +8,6 @@
 }
 
 .mainTitle {
-  position: absolute;
-  top: 80px;
-  left: 30px;
-
   font-family: var(--spartan);
   font-weight: 700;
   letter-spacing: -2px;
@@ -31,14 +27,28 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
+  margin: 0 0 200px 0;
+  gap: 32px;
+  width: 100%;
+  max-width: 1440px;
+  position: relative;
+  @media only screen and (max-width: 1100px) {
+    flex-direction: column;
+    padding: 0 15px;
+    height: fit-content;
+    min-height: fit-content;
+  }
+}
+
+.accordion {
+  display: flex;
   align-items: center;
-  margin: 200px 0;
   // padding: 0 20px;
   width: 100%;
   max-width: 1440px;
   height: 620px;
   min-height: 620px;
-  position: relative;
   @media only screen and (max-width: 1100px) {
     flex-direction: column;
     padding: 0 15px;
@@ -99,6 +109,14 @@
   }
 }
 
+.adultsTitle {
+  color: var(--white);
+  font-family: var(--spartan);
+  font-weight: 500;
+  font-size: 32px;
+  margin-top: 30px;
+}
+
 .text {
   color: var(--white);
   width: 500px;
@@ -109,6 +127,25 @@
     width: 100%;
     padding: 0 30px;
   }
+}
+
+.circle {
+  position: absolute;
+  left: 300px;
+  top: 50%;
+  rotate: -20deg;
+  width: 120px;
+  height: 120px;
+  background-color: var(--orange);
+  border-radius: 50%;
+  color: var(--white);
+  font-family: var(--spartan);
+  font-weight: 500;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .button {

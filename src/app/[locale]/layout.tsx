@@ -40,10 +40,10 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "en" | "hr")) {
+  if (!routing.locales.includes(locale as "en")) {
     notFound();
   }
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
 
   return (
     <html
@@ -56,4 +56,8 @@ export default async function RootLayout({
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return [{ locale: "en" }];
 }

@@ -307,7 +307,9 @@ export const Schedule = () => {
     <div className={styles.mainWrapper}>
       <div className={styles.wrapper}>
         <div className={styles.top}>
-          <div className={styles.title}>{t("mainTitle")}</div>
+          <div className={styles.title}>
+            {t("mainTitle")} {selectedCategory}
+          </div>
           <div className={styles.underTitle}>
             <div className={styles.month}>{t("date")}</div>
             <div className={styles.buttons}>

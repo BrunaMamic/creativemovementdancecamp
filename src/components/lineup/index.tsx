@@ -7,12 +7,13 @@ export const Lineup = () => {
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.wrapper}>
-        <div className={`${styles.mainTitle} `}>{t("mainTitle")}</div>
+        <div className={`${styles.mainTitle} `}>{t("mainTitle")} </div>
         <div className={styles.grid}>
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup2.webp"}
