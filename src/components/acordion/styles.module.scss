@@ -136,7 +136,8 @@
   font-size: 40px;
   @media only screen and (max-width: 900px) {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 10px;
+    font-size: 27px;
   }
 }
 
@@ -175,6 +176,10 @@
   &:hover {
     scale: 1.1;
     background-color: rgba(66, 45, 45, 0.682);
+  }
+
+  @media only screen and (max-width: 900px) {
+    margin: 10px;
   }
 }
 
@@ -242,5 +247,6 @@
     transform: rotate(0);
     position: relative;
     right: unset;
+    font-size: 18px;
   }
 }
