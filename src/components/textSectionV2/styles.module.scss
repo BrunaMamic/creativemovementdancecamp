@@ -3,6 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    margin: 100px 0;
+  }
 }
 
 .wrapper {
@@ -16,4 +20,9 @@
   color: var(--white);
   font-size: 140px;
   font-weight: 700;
+
+  @media screen and (max-width: 900px) {
+    font-size: 60px;
+    letter-spacing: -2px;
+  }
 }
