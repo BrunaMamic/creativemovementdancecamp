@@ -17,7 +17,7 @@ export const Hero2 = () => {
         <div className={styles.title4}>{t("title4")}</div>
       </div>
       <div className={styles.image}>
-        <Image src={"/static/hero.jpg"} alt={""} fill />
+        <Image src={"/static/hero.webp"} alt={""} fill />
       </div>
 
       <CircleLogo />

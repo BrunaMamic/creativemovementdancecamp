@@ -6,12 +6,18 @@
   width: 100%;
   height: 100%;
   margin: 200px 0;
+
+  @media only screen and (max-width: 900px) {
+    margin: 0;
+  }
 }
 
 .wrapper {
   width: 100%;
   height: 100%;
   max-width: 1440px;
+
+  padding: 20px;
 
   display: flex;
   flex-direction: column;
@@ -34,6 +40,11 @@
   padding: 20px 40px;
   transform: skew(-5deg);
   display: inline-block;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 30px;
+    padding: 9px 12px;
+  }
 }
 
 .text {
@@ -49,4 +60,20 @@
   flex-direction: column;
 
   gap: 12px;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 18px;
+    padding: 0px;
+    text-align: center;
+  }
+}
+
+.seeMoreBtn {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+  align-self: center;
 }

@@ -2,11 +2,17 @@
 
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
+import { useTranslations } from "next-intl";
 // import { useTranslations } from "use-intl";
 
 export const Acordion = () => {
-  const [opened, setOpened] = useState<number>(0);
-  const [openedJr, setOpenedJr] = useState<number>(0);
+  const t = useTranslations("schedule");
+
+  // const [openedJr, setOpenedJr] = useState<number>(0);
+  const [selectedCategory, setSelectedCategory] = useState<
+    "adults" | "juniors"
+  >("adults");
+
   // const t = useTranslations("home.accordion");
 
   const content = [
@@ -86,36 +92,54 @@ export const Acordion = () => {
     //   price: "10 €",
     // },
   ];
+  const pricingData = selectedCategory === "adults" ? content : contentJr;
+
+  const [opened, setOpened] = useState<number>(contentJr.length - 1);
 
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.wrapper}>
         <div className={styles.mainTitle}>PRICES & PACKAGES</div>
-        <div className={styles.adultsTitle}>ADULTS CREATIVES (AGE 15 +)</div>
-        <div className={styles.accordion}>
-          {content.map((image, index) => (
+        <div className={styles.infoWrapper}>
+          <div className={styles.buttons}>
             <div
-              key={index}
-              className={`${styles.container} ${opened === index && styles.opened}`}
-              onClick={() => setOpened(index)}>
-              <div className={styles.innerWrapper}>
-                <p className={` ${styles.text}`}>{image.info}</p>
-                <p className={` ${styles.text}`} style={{ fontWeight: "600" }}>
-                  {image.price}
-                </p>
-                {image.circle && (
-                  <div className={styles.circle}>{image.circle}</div>
-                )}
-                <div className={styles.button}> REGISTER NOW </div>
-              </div>
-              <div className={styles.titleWrapper}>
-                <h4 className={`heading3 ${styles.title} `}>{image.name}</h4>
-              </div>
+              className={`${styles.buttonCat} ${selectedCategory === "juniors" ? styles.active : ""}`}
+              onClick={() => setSelectedCategory("juniors")}>
+              {t("juniors")}
             </div>
-          ))}
+            <div
+              className={`${styles.buttonCat} ${selectedCategory === "adults" ? styles.active : ""}`}
+              onClick={() => setSelectedCategory("adults")}>
+              {t("adults")}
+            </div>
+          </div>
+          <div className={styles.accordion}>
+            {pricingData.map((image, index) => (
+              <div
+                key={index}
+                className={`${styles.container} ${opened === index && styles.opened}`}
+                onClick={() => setOpened(index)}>
+                <div className={styles.innerWrapper}>
+                  <p className={` ${styles.text}`}>{image.info}</p>
+                  <p
+                    className={` ${styles.text}`}
+                    style={{ fontWeight: "600" }}>
+                    {image.price}
+                  </p>
+                  {image.circle && (
+                    <div className={styles.circle}>{image.circle}</div>
+                  )}
+                  <div className={styles.button}> REGISTER NOW </div>
+                </div>
+                <div className={styles.titleWrapper}>
+                  <h4 className={`heading3 ${styles.title} `}>{image.name}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className={styles.adultsTitle}>
+        {/* <div className={styles.adultsTitle}>
           JUNIORS CREATIVES (AGE UP TO 15 Y.O.)
         </div>
         <div className={styles.accordion}>
@@ -139,7 +163,7 @@ export const Acordion = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className={styles.contact}>
           Have a question?{" "}

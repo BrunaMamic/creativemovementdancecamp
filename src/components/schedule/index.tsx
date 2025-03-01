@@ -10,6 +10,14 @@ export const Schedule = () => {
     "adults" | "juniors"
   >("adults");
 
+  const [expandedDays, setExpandedDays] = useState<number[]>([]);
+
+  const toggleDay = (index: number) => {
+    setExpandedDays((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
+
   const contentAdults = [
     {
       day: "WED",
@@ -329,10 +337,19 @@ export const Schedule = () => {
         <div className={styles.bottom}>
           {scheduleData.map((events, index) => (
             <div key={index} className={styles.dayWrapper}>
-              <div className={styles.day}> {events.day} </div>
-              <div className={styles.divider} />
-              <div className={styles.date}> {events.date} </div>
-              <div className={styles.whatWrapper}>
+              <div
+                className={styles.bottomTop}
+                onClick={() => toggleDay(index)}>
+                <div className={styles.day}> {events.day} </div>
+                <div className={styles.divider} />
+                <div className={styles.date}> {events.date} </div>
+                <div className={styles.mobileIndicator}>
+                  {expandedDays.includes(index) ? "−" : "+"}
+                </div>
+              </div>
+
+              <div
+                className={`${styles.whatWrapper} ${expandedDays.includes(index) ? styles.expanded : ""}`}>
                 {events.event.map((what, i) => (
                   <div className={styles.contentWrapper} key={i}>
                     <div className={styles.time}>{what.time}</div>
