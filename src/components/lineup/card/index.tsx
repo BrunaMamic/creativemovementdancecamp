@@ -12,11 +12,13 @@ export const Card = ({
   name,
   description,
   style,
+  onModalStateChange,
 }: {
   image: string;
   name?: string;
   description: string;
   style?: string;
+  onModalStateChange?: (isOpen: boolean) => void;
 }) => {
   const t = useTranslations("lineup");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,6 +39,13 @@ export const Card = ({
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
+
+  // Notify parent component when modal state changes
+  useEffect(() => {
+    if (onModalStateChange) {
+      onModalStateChange(isModalOpen);
+    }
+  }, [isModalOpen, onModalStateChange]);
 
   // Track if we're dragging to prevent modal open on drag
   const [isDragging, setIsDragging] = useState(false);
@@ -83,6 +92,10 @@ export const Card = ({
     setIsModalOpen(true);
   };
 
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <div
@@ -115,7 +128,7 @@ export const Card = ({
 
       <Modal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={handleModalClose}
         name={t(name)}
         description={t(description)}
         image={image}
