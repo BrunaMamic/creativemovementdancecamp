@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useRef, useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
@@ -14,6 +13,7 @@ export const Lineup = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -28,16 +28,38 @@ export const Lineup = () => {
     };
   }, []);
 
+  // Hide scroll indicator after user has scrolled
+  useEffect(() => {
+    if (!scrollContainerRef.current || !isMobile) return;
+
+    const handleScroll = () => {
+      if (scrollContainerRef.current)
+        if (scrollContainerRef.current?.scrollLeft > 20) {
+          setShowScrollIndicator(false);
+        }
+    };
+
+    scrollContainerRef.current.addEventListener("scroll", handleScroll);
+
+    return () => {
+      scrollContainerRef.current?.removeEventListener("scroll", handleScroll);
+    };
+  }, [isMobile]); // Removed unnecessary scrollContainerRef dependency
+
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!isMobile || !scrollContainerRef.current) return;
 
     setIsDragging(true);
     setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
     setScrollLeft(scrollContainerRef.current.scrollLeft);
+
+    // Add dragging class for visual feedback
+    scrollContainerRef.current.classList.add(styles.dragging);
   };
 
   const handleMouseUp = () => {
     setIsDragging(false);
+    scrollContainerRef.current?.classList.remove(styles.dragging);
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -45,7 +67,8 @@ export const Lineup = () => {
 
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
+    // Reduced sensitivity for smoother scrolling
+    const walk = (x - startX) * 1.2;
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -55,13 +78,20 @@ export const Lineup = () => {
     setIsDragging(true);
     setStartX(e.touches[0].pageX - scrollContainerRef.current.offsetLeft);
     setScrollLeft(scrollContainerRef.current.scrollLeft);
+
+    // Add dragging class for visual feedback
+    scrollContainerRef.current.classList.add(styles.dragging);
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!isDragging || !scrollContainerRef.current) return;
 
+    // Prevent page scrolling while dragging the carousel
+    e.preventDefault();
+
     const x = e.touches[0].pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
+    // Reduced sensitivity for smoother scrolling
+    const walk = (x - startX) * 1.2;
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -70,9 +100,15 @@ export const Lineup = () => {
       <div className={styles.wrapper}>
         <div className={`${styles.mainTitle}`}>{t("mainTitle")}</div>
 
-        {isMobile && <div className={styles.scrollCircle}> Scroll</div>}
+        {isMobile && showScrollIndicator && (
+          <div className={styles.scrollCircle}>
+            <span>Scroll</span>
+            <div className={styles.scrollArrow}>→</div>
+          </div>
+        )}
+
         <div
-          className={styles.grid}
+          className={`${styles.grid} ${isDragging ? styles.dragging : ""}`}
           ref={scrollContainerRef}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
