@@ -31,5 +31,22 @@
     "date": "JULY 2025",
     "juniors": "CREATIVE JUNIORS",
     "adults": "CREATIVE ADULTS"
+  },
+  "contact": {},
+  "faq": {
+    "q1": "Who can join the Creative Movement Dance Camp?",
+    "a1": "Anyone who fits into one of the following categories is welcome to join:\n\nYoung Creatives\n- Up to age 15\n\nAdult Creatives\n- Age 15+\n- More intensive program\n- Pre-existing dance knowledge is advised, but not mandatory",
+
+    "q2": "How do I make a payment?",
+    "a2": "Once we receive your online application—including your name, surname, email address, age, phone number, and chosen package—we will send you an email with payment details.\n\n**Important:**\n- Payment must be made within **3 days** of receiving the email; otherwise, your application will be considered invalid.\n- When making the payment, please include the participant’s name and chosen package as transaction details.\n\nFor inquiries regarding **payment in installments or group registrations**, please contact us via creative.movement.camp@gmail.com.",
+
+    "q3": "What is the cancellation policy?",
+    "a3": "Once your application is submitted, you have up to **5 days** to make any changes or cancel, just in case your plans or circumstances change. After this period, refunds will no longer be available.\n• The organizer reserves the right to modify/change the line-up, schedule, and location without obligation to issue refunds.\n• Refunds are only possible if the camp is canceled by the organizer.",
+
+    "q4": "Is there a group discount?",
+    "a4": "Yes! If you apply as a group (6-15 people), you are eligible for a discount:\n- **6-10 people:** 10% discount\n- **10-15 people:** 15% discount\n\nTo apply as a group, provide the names of all group members in your application.\n\n**Note:** If a member cancels, the group discount percentage may change accordingly.",
+
+    "q5": "Can I get assistance with accommodation?",
+    "a5": "Yes, we provide accommodation options, but availability is limited. Please inform us in advance to secure a spot. Check the accommodation link (insert shortcut to link) and contact us via creative.movement.camp@gmail.com if you need assistance.\n\nAdditionally, **breakfast can be provided upon request** if arranged in advance."
   }
 }

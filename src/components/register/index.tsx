@@ -5,8 +5,8 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
 
-export const ContactForm = () => {
-  const t = useTranslations("contact");
+export const Register = () => {
+  // const t = useTranslations("contact");
   const [success, setSuccess] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -54,8 +54,8 @@ export const ContactForm = () => {
 
   return (
     <div className={`${styles.formWrapper}`}>
+      <div className={styles.overlay}></div>
       <div className={styles.wrapper}>
-        <div className={styles.title}>Have a question?</div>
         <div className={styles.formMainWrapper}>
           <form
             className={`${styles.form}`}
@@ -76,7 +76,7 @@ export const ContactForm = () => {
                   type="text"
                   id="Name"
                   name="name"
-                  placeholder="Name"
+                  placeholder="Full Name"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -95,6 +95,56 @@ export const ContactForm = () => {
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
+                  }
+                />
+              </div>
+            </div>
+
+            <div className={styles.row}>
+              <div className={styles.inputGroup}>
+                <label htmlFor="Name" hidden>
+                  Phone
+                </label>
+                <input
+                  type="text"
+                  id="Name"
+                  name="name"
+                  placeholder="Phone"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                />
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="email" hidden>
+                  Date of birth
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Date of birth 'dd/mm/yyyy'"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                />
+              </div>
+            </div>
+            <div className={styles.row}>
+              <div className={styles.inputGroup}>
+                <label htmlFor="Name" hidden>
+                  Package
+                </label>
+                <input
+                  type="text"
+                  id="Name"
+                  name="name"
+                  placeholder="Package"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
                   }
                 />
               </div>
@@ -166,5 +216,3 @@ export const ContactForm = () => {
     </div>
   );
 };
-
-export default ContactForm;

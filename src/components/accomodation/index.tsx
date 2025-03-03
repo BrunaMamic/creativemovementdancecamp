@@ -6,7 +6,7 @@ export const Accomodation = () => {
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.wrapper}>
-        <div className={styles.mainTitle}>ACCOMMODATION PROPOSAL</div>
+        <div className={styles.mainTitle}>ACCOMMODATION</div>
         <div className={styles.content}>
           <div className={styles.image}>
             <Image src={"/static/accomodation.jpeg"} alt="" fill />

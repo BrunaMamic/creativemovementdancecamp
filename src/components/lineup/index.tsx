@@ -15,7 +15,6 @@ export const Lineup = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if we're on mobile
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 900);
@@ -29,7 +28,6 @@ export const Lineup = () => {
     };
   }, []);
 
-  // Mouse events for drag scrolling
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!isMobile || !scrollContainerRef.current) return;
 
@@ -47,11 +45,10 @@ export const Lineup = () => {
 
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll speed multiplier
+    const walk = (x - startX) * 2;
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  // Touch events for mobile drag scrolling
   const handleTouchStart = (e: React.TouchEvent) => {
     if (!isMobile || !scrollContainerRef.current) return;
 
@@ -92,42 +89,51 @@ export const Lineup = () => {
           />
           <Card
             image={"/static/lineup/lineup2.webp"}
+            name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
           <Card
             image={"/static/lineup/lineup1.webp"}
             name={"card1.name"}
             description={"card1.description"}
+            style={"card1.style"}
           />
         </div>
       </div>
