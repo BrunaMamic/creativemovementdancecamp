@@ -94,6 +94,7 @@
     width: 100%;
     font-size: 14px;
     white-space: nowrap;
+    margin-bottom: 20px;
 
     flex-direction: row;
 
@@ -282,4 +283,10 @@
   font-size: 20px;
   font-weight: 700;
   color: var(--white);
+
+  @media screen and (max-width: 900px) {
+    position: absolute;
+    margin: 25px 0;
+    top: 50px;
+  }
 }
