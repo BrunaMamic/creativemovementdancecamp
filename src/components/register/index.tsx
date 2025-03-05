@@ -1,64 +1,128 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./styles.module.scss";
-import { useTranslations } from "next-intl";
+import PhoneNumberInput from "./phoneInput";
+import { ChevronDown } from "lucide-react";
+import { Link } from "@/i18n/routing";
 
 export const Register = () => {
   // const t = useTranslations("contact");
   const [success, setSuccess] = useState(0);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     description: "",
+    phone: "",
+    birthday: "",
+    category: "",
+    package: "",
   });
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [packageDropdownOpen, setPackageDropdownOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
+  const creativeJuniors = [
+    "MOVE FULL OUT - 150e",
+    "DANCE, SLEEP, REPEAT - 350e",
+    "EARLY BIRD PASS - 100e",
+  ];
+
+  const creativeAdults = [
+    "MOVE FULL OUT - 290e",
+    "DANCE, SLEEP, REPEAT - 490e",
+    "EARLY BIRD PASS - 240e",
+    "BATTLE MOVERS -190e",
+    "MOVE ONE DAY - 90e",
+  ];
+
+  const getPackageOptions = () => {
+    if (formData.category === "Creative Junior") return creativeJuniors;
+    if (formData.category === "Creative Adults") return creativeAdults;
+    return [...creativeJuniors, ...creativeAdults];
+  };
+
+  const toggleDropdown = () => {
+    setDropdownOpen((prev) => !prev);
+  };
+
+  const handleSelect = (category: string) => {
+    setFormData({ ...formData, category });
+    setSelectedPackage("");
+    setDropdownOpen(false);
+  };
+
+  const handlePhoneInputChange = ({
+    phone,
+    countryCode,
+  }: {
+    phone: string;
+    countryCode: string;
+  }) => {
+    setFormData((prev) => ({
+      ...prev,
+      phone: `${countryCode} ${phone}`,
+    }));
+  };
 
   const validateEmail = (email: string) => {
-    const regex = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+    const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return regex.test(email);
   };
 
   const handleSubmit = async () => {
-    const formElement: HTMLFormElement = document.getElementById(
-      "contact-form"
-    ) as HTMLFormElement;
+    let isValid = true;
+    const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-    if (formElement) {
-      let isValid = true;
-      const regex = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+    if (
+      !formData.name ||
+      !regex.test(formData.email) ||
+      !formData.phone ||
+      !formData.birthday ||
+      !formData.category ||
+      !formData.package
+    ) {
+      isValid = false;
+    }
 
-      if (!formData.name || !regex.test(formElement.email.value)) {
-        isValid = false;
-      }
+    if (isValid) {
+      const form = new FormData();
 
-      if (isValid) {
-        const form = new FormData();
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("phone", formData.phone);
+      form.append("birthday", formData.birthday);
+      form.append("category", formData.category);
+      form.append("package", formData.package);
+      form.append("description", formData.description);
 
-        form.append("name", formElement.Name.value);
-        form.append("email", formElement.email.value);
-        form.append("description", formElement.description.value);
+      const dataToSend = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        birthday: formData.birthday,
+        category: formData.category,
+        package: formData.package,
+        description: formData.description,
+      };
+      setSuccess(1);
 
-        const dataToSend = {
-          name: formElement.Name.value,
-          email: formElement.email.value,
-          description: formElement.description.value,
-        };
-
-        console.log(dataToSend);
-      } else {
-        console.error("Form is not valid");
-      }
+      console.log(dataToSend);
+    } else {
+      console.error("Form is not valid");
     }
   };
 
   return (
-    <div className={`${styles.formWrapper}`}>
+    <div className={styles.formWrapper}>
       <div className={styles.overlay}></div>
       <div className={styles.wrapper}>
         <div className={styles.formMainWrapper}>
           <form
-            className={`${styles.form}`}
+            className={styles.form}
             onSubmit={(e) => e.preventDefault()}
             id="contact-form">
             <div className={styles.mainTitle}>
@@ -102,51 +166,97 @@ export const Register = () => {
 
             <div className={styles.row}>
               <div className={styles.inputGroup}>
-                <label htmlFor="Name" hidden>
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  id="Name"
-                  name="name"
-                  placeholder="Phone"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                <PhoneNumberInput
+                  label="Phone Number"
+                  placeholder={""}
+                  onChange={handlePhoneInputChange}
+                  error={""}
+                  value={formData.phone}
+                  name={"phone"}
                 />
               </div>
               <div className={styles.inputGroup}>
-                <label htmlFor="email" hidden>
+                <label htmlFor="birthday" hidden>
                   Date of birth
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="text"
+                  id="birthday"
+                  name="birthday"
                   placeholder="Date of birth 'dd/mm/yyyy'"
-                  value={formData.email}
+                  value={formData.birthday}
                   onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
+                    setFormData({ ...formData, birthday: e.target.value })
                   }
                 />
               </div>
             </div>
             <div className={styles.row}>
               <div className={styles.inputGroup}>
-                <label htmlFor="Name" hidden>
+                <label htmlFor="Category" hidden>
+                  Category
+                </label>
+                <input
+                  type="text"
+                  id="Category"
+                  name="Category"
+                  placeholder="Select category"
+                  value={formData.category}
+                  onClick={toggleDropdown}
+                  readOnly
+                  className={styles.catInput}
+                />
+                <div className={styles.dropdownArrow}>
+                  <ChevronDown color="white" size={18} />
+                </div>
+                {dropdownOpen && (
+                  <div className={styles.countryList}>
+                    <div
+                      className={styles.countryItem}
+                      onClick={() => handleSelect("Creative Junior")}>
+                      Creative Junior
+                    </div>
+                    <div
+                      className={styles.countryItem}
+                      onClick={() => handleSelect("Creative Adults")}>
+                      Creative Adults
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div className={styles.inputGroup}>
+                <label htmlFor="package" hidden>
                   Package
                 </label>
                 <input
                   type="text"
-                  id="Name"
-                  name="name"
-                  placeholder="Package"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  id="package"
+                  name="package"
+                  placeholder="Select package"
+                  value={selectedPackage}
+                  onClick={() => setPackageDropdownOpen((prev) => !prev)}
+                  readOnly
+                  className={styles.catInput}
                 />
+                <div className={styles.dropdownArrow}>
+                  <ChevronDown color="white" size={18} />
+                </div>
+                {packageDropdownOpen && (
+                  <div className={styles.countryList}>
+                    {getPackageOptions().map((pkg, index) => (
+                      <div
+                        key={index}
+                        className={styles.countryItem}
+                        onClick={() => {
+                          setSelectedPackage(pkg);
+                          setFormData({ ...formData, package: pkg });
+                          setPackageDropdownOpen(false);
+                        }}>
+                        {pkg}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -169,6 +279,23 @@ export const Register = () => {
 
             <div className={styles.row}>
               <div className={styles.buttonWrapper}>
+                <div className={styles.termsCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    checked={termsAccepted}
+                    onChange={(e) => setTermsAccepted(e.target.checked)}
+                  />
+                  <label htmlFor="terms">
+                    By registering you accept{" "}
+                    <Link
+                      href="/terms-and-conditions"
+                      className={styles.termsLink}>
+                      terms and conditions
+                    </Link>{" "}
+                    of Creative Movement Dance Camp
+                  </label>
+                </div>
                 {success === 1 ? (
                   <div className={styles.successAnimation}>
                     <svg
@@ -202,7 +329,11 @@ export const Register = () => {
                       !(
                         formData.name &&
                         validateEmail(formData.email) &&
-                        formData.description
+                        formData.phone &&
+                        formData.birthday &&
+                        formData.category &&
+                        formData.package &&
+                        termsAccepted
                       )
                     }>
                     Send a message

@@ -8,7 +8,7 @@ export const Organizer = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.mainWrapper} id="about">
       <div className={styles.wrapper}>
         <div className={styles.mainTitle}>THE ORGANIZER</div>
         <div className={styles.content}>

@@ -312,7 +312,7 @@ export const Schedule = () => {
     selectedCategory === "adults" ? contentAdults : contentJuniors;
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.mainWrapper} id="schedule">
       <div className={styles.wrapper}>
         <div className={styles.top}>
           <div className={styles.title}>

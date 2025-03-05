@@ -1,0 +1,121 @@
+:root {
+  --color-heading: #798eb0;
+  --color-counter: #8973fd;
+  --font-family-heading: "Mukta", sans-serif;
+}
+
+.mainWrapper {
+}
+
+.app {
+  //   background-image: linear-gradient(15deg, #1a1a1a, var(--background));
+  background-color: var(--background);
+  color: var(--orange);
+  display: flex;
+  margin: 200px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  padding: 20px;
+
+  gap: 32px;
+}
+
+.mainTitle {
+  font-family: var(--spartan);
+  font-weight: 700;
+  letter-spacing: -2px;
+
+  width: fit-content;
+
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  transform: skew(-5deg);
+  display: inline-block;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 30px;
+    padding: 9px 12px;
+  }
+}
+
+.socials {
+  position: absolute;
+  bottom: -50px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .socTitle {
+    font-size: 20px;
+    font-family: var(--sans);
+    color: var(--white);
+  }
+  .icons {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @media (min-width: 48em) {
+  }
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+  @media (min-width: 35.5em) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 2rem;
+  }
+}
+
+.counter {
+  background: rgba(255, 255, 255, 0.025);
+  border-radius: 1rem;
+  color: var(--orange);
+  display: flex;
+  flex-direction: column;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(1rem, 8vw, 99rem);
+  font-weight: 100;
+  line-height: 1;
+  padding: 2vw;
+  text-align: center;
+
+  h2 {
+    color: var(--orange);
+    font-family: var(--sego);
+    font-size: clamp(1rem, 2vw, 99rem);
+    font-weight: 300;
+    letter-spacing: 0.1875em;
+    margin: 1.25rem 0 0;
+    order: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+  }
+}

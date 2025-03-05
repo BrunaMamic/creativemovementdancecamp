@@ -1,0 +1,103 @@
+.wrapAll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.inputMainWrapper {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  gap: 7px;
+
+  border: 1px solid white;
+  outline: 1px solid transparent;
+  transition: border-color 0.2s ease;
+
+  input {
+    border: 1px solid var(--white);
+    color: #fff;
+    background-color: inherit;
+    border: none;
+    width: 100%;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px inset;
+      transition: background-color 50000s ease-in-out 0s;
+    }
+  }
+}
+
+.countrySelect {
+  position: relative;
+}
+
+.selectedCountry {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+
+  .countryCode {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.countryList {
+  position: absolute;
+  top: 40px;
+  left: -13px;
+  background-color: #381e04;
+  max-height: 200px;
+  width: fit-content;
+  white-space: nowrap;
+  overflow-y: auto;
+  //   scrollbar-width: none;
+  z-index: 10;
+}
+
+.countryItem {
+  display: flex;
+  gap: 15px;
+  margin: 0 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:first-child {
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background-color: #703c08;
+  }
+}
+
+.phoneInput {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  height: fit-content;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+  }
+}

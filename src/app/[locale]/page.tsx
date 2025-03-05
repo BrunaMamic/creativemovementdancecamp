@@ -2,6 +2,7 @@ import { Accomodation } from "@/components/accomodation";
 import { Acordion } from "@/components/acordion";
 import { CampIdea } from "@/components/campIdea";
 import ContactForm from "@/components/contact";
+import CounterTime from "@/components/countdown";
 import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero2 } from "@/components/hero2";
@@ -20,6 +21,7 @@ export default function Home() {
       <Navbar />
       <Hero2 />
       <TextSectionV2 />
+      <CounterTime />
       <Lineup />
       <Schedule />
       <Acordion />

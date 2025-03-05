@@ -1,139 +1,84 @@
 "use client";
 
-import type React from "react";
-
-import { useRef, useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
 import { Card } from "./card";
+import { useRef } from "react";
 
 export const Lineup = () => {
   const t = useTranslations("lineup");
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 900);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-    };
-  }, []);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!isMobile || !scrollContainerRef.current) return;
-
-    setIsDragging(true);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollContainerRef.current) return;
-
-    e.preventDefault();
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!isMobile || !scrollContainerRef.current) return;
-
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !scrollContainerRef.current) return;
-
-    const x = e.touches[0].pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
+  const gridRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.mainWrapper} id="creative-lineup">
       <div className={styles.wrapper}>
-        <div className={`${styles.mainTitle}`}>{t("mainTitle")}</div>
-
-        {isMobile && <div className={styles.scrollCircle}> Scroll</div>}
-        <div
-          className={styles.grid}
-          ref={scrollContainerRef}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onMouseMove={handleMouseMove}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleMouseUp}
-          onTouchMove={handleTouchMove}>
+        <div className={`${styles.mainTitle} `}>{t("mainTitle")} </div>
+        <div ref={gridRef} className={styles.grid}>
           <Card
-            image={"/static/lineup/lineup1.webp"}
+            image={"/static/lineup/aleksandra.webp"}
             name={"card1.name"}
             description={"card1.description"}
             style={"card1.style"}
           />
           <Card
-            image={"/static/lineup/lineup2.webp"}
-            description={"card1.description"}
-            name={"card1.name"}
-            style={"card1.style"}
+            image={"/static/lineup/ana.webp"}
+            description={"card2.description"}
+            name={"card2.name"}
+            style={"card2.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/barbara.webp"}
+            name={"card3.name"}
+            description={"card3.description"}
+            style={"card3.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/danilo.webp"}
+            name={"card4.name"}
+            description={"card4.description"}
+            style={"card4.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/keron.webp"}
+            name={"card5.name"}
+            description={"card5.description"}
+            style={"card5.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/monika.webp"}
+            name={"card6.name"}
+            description={"card6.description"}
+            style={"card6.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/monja.webp"}
+            name={"card7.name"}
+            description={"card7.description"}
+            style={"card7.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/selasi.webp"}
+            name={"card8.name"}
+            description={"card8.description"}
+            style={"card8.style"}
           />
           <Card
-            image={"/static/lineup/lineup1.webp"}
-            name={"card1.name"}
-            description={"card1.description"}
-            style={"card1.style"}
+            image={"/static/lineup/sergii.webp"}
+            name={"card9.name"}
+            description={"card9.description"}
+            style={"card9.style"}
+          />
+          <Card
+            image={"/static/lineup/vedrana.webp"}
+            name={"card10.name"}
+            description={"card10.description"}
+            style={"card10.style"}
+          />
+          <Card
+            image={"/static/lineup/veronika.webp"}
+            name={"card11.name"}
+            description={"card11.description"}
+            style={"card11.style"}
           />
         </div>
       </div>

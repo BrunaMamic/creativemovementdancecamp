@@ -55,7 +55,7 @@
   padding: 0 20px;
 
   @media only screen and (max-width: 900px) {
-    padding: 0 15px;
+    padding: 0 0 0 15px;
   }
 }
 
@@ -90,17 +90,21 @@
 
   @media only screen and (max-width: 900px) {
     display: grid;
-    grid-template-columns: repeat(9, 280px);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
+    grid-template-columns: repeat(
+      6,
+      320px
+    ); /* Adjust based on number of cards */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    grid-auto-flow: dense; /* Ensures cards fill the grid efficiently */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
-    gap: 20px;
+    gap: 10px;
     padding: 20px 0;
     cursor: grab;
 
+    /* Hide scrollbar */
     &::-webkit-scrollbar {
       display: none; /* Chrome, Safari and Opera */
     }

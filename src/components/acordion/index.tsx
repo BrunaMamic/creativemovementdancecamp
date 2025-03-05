@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 // import { useTranslations } from "use-intl";
 
 export const Acordion = () => {
@@ -19,13 +20,8 @@ export const Acordion = () => {
     {
       name: "“MOVE FULL OUT“ - ADULT CREATIVES ",
       info: "20 classes",
-      price: "270 €",
+      price: "290 €",
     },
-    // {
-    //   name: "“MOVE FULL OUT“ - YOUNG CREATIVES ",
-    //   info: "20 classes (+15 years)",
-    //   price: "150 €",
-    // },
     {
       name: "“MOVE ONE DAY” ",
       info: "5 classes",
@@ -38,66 +34,41 @@ export const Acordion = () => {
     },
     {
       name: "“BATTLE MOVERS”",
-      info: "10 classes Thursday and Saturday + battle entre fee Friday + Party",
+      info: "10 classes (17.07 - 19.07) + Battle Enterance",
       price: "190 €",
     },
     {
       name: "“EARLY BIRD”",
       info: "20 CLASSES ",
       circle: "10 spots",
-      price: "190 €",
+      price: "240 €",
     },
-    // {
-    //   name: "“BATTLE AND PARTY”",
-    //   info: "Single entrée fee / participations + After Dj Party",
-    //   price: "25 €",
-    // },
-    // {
-    //   name: "“BATTLE SUPPORTERS”",
-    //   info: "watch the battle and join the after party",
-    //   price: "10 €",
-    // },
   ];
 
   const contentJr = [
     {
       name: "“MOVE FULL OUT“ - YOUNG CREATIVES ",
-      info: "20 classes",
-      price: "270 €",
+      info: "10 CLASSES ",
+      price: "150 €",
     },
-    // {
-    //   name: "“MOVE FULL OUT“ - YOUNG CREATIVES ",
-    //   info: "20 classes (+15 years)",
-    //   price: "150 €",
-    // },
     {
       name: "“DANCE SLEEP REPEAT”",
-      info: "20 classes + 4 nights in Design Hostel One Split",
-      price: "490 €",
+      info: "10 CLASSES + 4 nights in Design Hostel One Split",
+      price: "350 €",
     },
     {
       name: "“EARLY BIRD”",
-      info: "20 CLASSES ",
+      info: "10 CLASSES ",
       circle: "10 spots",
-      price: "190 €",
+      price: "100 €",
     },
-    // {
-    //   name: "“BATTLE AND PARTY”",
-    //   info: "Single entrée fee / participations + After Dj Party",
-    //   price: "25 €",
-    // },
-    // {
-    //   name: "“BATTLE SUPPORTERS”",
-    //   info: "watch the battle and join the after party",
-    //   price: "10 €",
-    // },
   ];
   const pricingData = selectedCategory === "adults" ? content : contentJr;
 
   const [opened, setOpened] = useState<number>(contentJr.length - 1);
 
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.mainWrapper} id="prices">
       <div className={styles.wrapper}>
         <div className={styles.mainTitle}>PRICES & PACKAGES</div>
         <div className={styles.infoWrapper}>
@@ -112,6 +83,11 @@ export const Acordion = () => {
               onClick={() => setSelectedCategory("adults")}>
               {t("adults")}
             </div>
+            {selectedCategory === "adults" ? (
+              <div className={styles.miniInfo}> *Age 15 + </div>
+            ) : (
+              <div className={styles.miniInfo}> *Up to 15 y.o. </div>
+            )}
           </div>
           <div className={styles.accordion}>
             {pricingData.map((image, index) => (
@@ -129,7 +105,10 @@ export const Acordion = () => {
                   {image.circle && (
                     <div className={styles.circle}>{image.circle}</div>
                   )}
-                  <div className={styles.button}> REGISTER NOW </div>
+                  <div className={styles.button}>
+                    {" "}
+                    <Link href={"/register-here"}>REGISTER NOW </Link>{" "}
+                  </div>
                 </div>
                 <div className={styles.titleWrapper}>
                   <h4 className={`heading3 ${styles.title} `}>{image.name}</h4>
@@ -138,36 +117,11 @@ export const Acordion = () => {
             ))}
           </div>
         </div>
-
-        {/* <div className={styles.adultsTitle}>
-          JUNIORS CREATIVES (AGE UP TO 15 Y.O.)
-        </div>
-        <div className={styles.accordion}>
-          {contentJr.map((image, index) => (
-            <div
-              key={index}
-              className={`${styles.container} ${openedJr === index && styles.opened}`}
-              onClick={() => setOpenedJr(index)}>
-              <div className={styles.innerWrapper}>
-                <p className={` ${styles.text}`}>{image.info}</p>
-                <p className={` ${styles.text}`} style={{ fontWeight: "600" }}>
-                  {image.price}
-                </p>
-                {image.circle && (
-                  <div className={styles.circle}>{image.circle}</div>
-                )}
-                <div className={styles.button}> REGISTER NOW </div>
-              </div>
-              <div className={styles.titleWrapper}>
-                <h4 className={`heading3 ${styles.title} `}>{image.name}</h4>
-              </div>
-            </div>
-          ))}
-        </div> */}
-
         <div className={styles.contact}>
           Have a question?{" "}
-          <div className={styles.buttonContact}> CONTACT US </div>{" "}
+          <div className={styles.buttonContact}>
+            <Link href={"#contact"}>CONTACT US </Link>
+          </div>{" "}
         </div>
       </div>
     </div>

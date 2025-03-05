@@ -53,7 +53,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className={`${styles.formWrapper}`}>
+    <div className={`${styles.formWrapper}`} id="contact">
       <div className={styles.wrapper}>
         <div className={styles.title}>Have a question?</div>
         <div className={styles.formMainWrapper}>

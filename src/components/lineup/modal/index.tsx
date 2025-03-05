@@ -4,13 +4,13 @@ import Image from "next/image";
 export const Modal = ({
   isOpen,
   onClose,
-  name,
+  // name,
   description,
   image,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  name?: string;
+  // name?: string;
   description: string;
   image: string;
 }) => {
@@ -23,11 +23,18 @@ export const Modal = ({
           X
         </button>
         <div className={styles.image}>
-          <Image src={image} alt="" width={350} height={460} />
+          <Image
+            src={image || "/placeholder.svg"}
+            alt=""
+            width={350}
+            height={350}
+          />
         </div>
-        <div className={styles.content}>
-          {name && <h2>{name}</h2>}
-          <p>{description}</p>
+        <div className={styles.contentWrapper}>
+          <div className={styles.content}>
+            {/* {name && <h2>{name}</h2>} */}
+            <p>{description}</p>
+          </div>
         </div>
       </div>
     </div>

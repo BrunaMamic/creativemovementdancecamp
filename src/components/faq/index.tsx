@@ -21,7 +21,7 @@ export const Faq = () => {
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.wrapper}>
-        <div className={styles.mainTitle}>Have a question?</div>
+        <div className={styles.mainTitle}>FREQUENTLY ASKED QUESTION</div>
         <div className={styles.questions}>
           {/* FAQ 1 */}
           <div

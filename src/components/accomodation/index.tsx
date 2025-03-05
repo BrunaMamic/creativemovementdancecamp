@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Accomodation = () => {
   return (
-    <div className={styles.mainWrapper}>
+    <div className={styles.mainWrapper} id="accommodation">
       <div className={styles.wrapper}>
         <div className={styles.mainTitle}>ACCOMMODATION</div>
         <div className={styles.content}>
