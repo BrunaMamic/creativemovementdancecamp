@@ -39,16 +39,34 @@ const Counter = ({ displayValue, label }: CounterType) => (
 );
 
 export default function CounterTime() {
-  const [timeDisplay, setTimeDisplay] =
-    useState<TimeDisplayValuesType>(generateTimeDisplay);
+  // Use null as initial state to indicate we haven't calculated time yet
+  const [timeDisplay, setTimeDisplay] = useState<TimeDisplayValuesType | null>(
+    null
+  );
+  // Track if component is mounted
+  const [isMounted, setIsMounted] = useState(false);
 
+  // Set isMounted to true after component mounts on client
   useEffect(() => {
-    const interval = setInterval(
-      () => setTimeDisplay(generateTimeDisplay),
-      1000
-    );
-    return () => clearInterval(interval);
+    setIsMounted(true);
+    setTimeDisplay(generateTimeDisplay());
   }, []);
+
+  // Only start the interval after component is mounted
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const interval = setInterval(() => {
+      setTimeDisplay(generateTimeDisplay());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [isMounted]);
+
+  // Show a placeholder or nothing until client-side code runs
+  if (!timeDisplay) {
+    return null; // Or a loading state if preferred
+  }
 
   return (
     <div className={styles.app}>
