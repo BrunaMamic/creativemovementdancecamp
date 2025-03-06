@@ -3,16 +3,36 @@
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
 import { Card } from "./card";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 export const Lineup = () => {
   const t = useTranslations("lineup");
   const gridRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <div className={styles.mainWrapper} id="creative-lineup">
       <div className={styles.wrapper}>
         <div className={`${styles.mainTitle} `}>{t("mainTitle")} </div>
+        {isMobile && (
+          <div className={styles.swipe}>
+            {" "}
+            <ArrowRight color="var(--white)" />{" "}
+          </div>
+        )}
         <div ref={gridRef} className={styles.grid}>
           <Card
             image={"/static/lineup/aleksandra.webp"}

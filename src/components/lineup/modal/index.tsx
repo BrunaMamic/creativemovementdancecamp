@@ -1,16 +1,16 @@
 import styles from "./styles.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
 
 export const Modal = ({
   isOpen,
   onClose,
-  // name,
+  name,
   description,
-  image,
+  // image,
 }: {
   isOpen: boolean;
   onClose: () => void;
-  // name?: string;
+  name?: string;
   description: string;
   image: string;
 }) => {
@@ -22,17 +22,17 @@ export const Modal = ({
         <button className={styles.closeButton} onClick={onClose}>
           X
         </button>
-        <div className={styles.image}>
+        {/* <div className={styles.image}>
           <Image
             src={image || "/placeholder.svg"}
             alt=""
             width={350}
             height={350}
           />
-        </div>
+        </div> */}
         <div className={styles.contentWrapper}>
           <div className={styles.content}>
-            {/* {name && <h2>{name}</h2>} */}
+            {name && <h2>{name}</h2>}
             <p>{description}</p>
           </div>
         </div>

@@ -63,8 +63,8 @@ export const ContactForm = () => {
             id="contact-form">
             <div className={styles.mainTitle}>
               <div className={styles.text}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the{" "}
+                We’d love to hear from you. Please provide your details, and our
+                team will reach out as soon as possible.
               </div>
             </div>
             <div className={styles.row}>

@@ -88,7 +88,7 @@ export const Card = ({
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        // name={t(name)}
+        name={t(name)}
         description={t(description)}
         image={image}
       />

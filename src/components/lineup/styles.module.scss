@@ -7,7 +7,7 @@
   height: 100%;
 
   @media only screen and (max-width: 900px) {
-    margin: 100px 0;
+    margin: 150px 0;
   }
 }
 
@@ -120,4 +120,30 @@
   height: 100%;
 }
 
-/* Flip card styles for the Card component */
+.swipe {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: var(--orange);
+  top: 50%;
+  right: 30px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  animation: scaleIt 1.3s ease infinite;
+}
+
+@keyframes scaleIt {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
