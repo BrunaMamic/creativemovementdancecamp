@@ -5,6 +5,14 @@
     "title3": "DANCE CAMP",
     "title4": "16 - 20 JULY"
   },
+  "counter": {
+    "mainTitle": "SEE YOU FOR ...",
+    "days": "DAZ",
+    "hours": "HOUR",
+    "minutes": "MINUTES",
+    "seconds": "SECONDS",
+    "socials": "Let's connect"
+  },
   "slider": {
     "element1": "CREATIVES LINE-UP",
     "element2": "DANCE ALL STYLE BATTLE 1 VS 1",
@@ -82,6 +90,14 @@
     "juniors": "CREATIVE JUNIORS",
     "adults": "CREATIVE ADULTS"
   },
+  "accordion": {
+    "mainTitle": "PRICES & PACKAGES",
+    "miniInfo1": "*Age 15 +",
+    "miniInfo2": "*Up to 15 y.o.",
+    "contactTitle": "Have a question?",
+    "contactButton": "CONTACT US",
+    "register": "REGISTER HERE"
+  },
   "contact": {},
   "faq": {
     "q1": "Who can join the Creative Movement Dance Camp?",
@@ -98,5 +114,15 @@
 
     "q5": "Can I get assistance with accommodation?",
     "a5": "Yes, we provide accommodation options, but availability is limited. Please inform us in advance to secure a spot. Check the accommodation link (insert shortcut to link) and contact us via creative.movement.camp@gmail.com if you need assistance.\n\nAdditionally, **breakfast can be provided upon request** if arranged in advance."
+  },
+  "navbar": {
+    "link1": "CREATIVE LINEUP",
+    "link2": "SCHEDULE",
+    "link3": "LOCATION",
+    "link4": "PRICES & PACKAGES",
+    "link5": "ABOUT US",
+    "link6": "ACCOMMODATION",
+    "link7": "CONTACT US",
+    "link8": "REGISTER HERE"
   }
 }

@@ -7,7 +7,7 @@ import { Link } from "@/i18n/routing";
 // import { useTranslations } from "use-intl";
 
 export const Acordion = () => {
-  const t = useTranslations("schedule");
+  const t = useTranslations("accordion");
 
   // const [openedJr, setOpenedJr] = useState<number>(0);
   const [selectedCategory, setSelectedCategory] = useState<
@@ -70,7 +70,7 @@ export const Acordion = () => {
   return (
     <div className={styles.mainWrapper} id="prices">
       <div className={styles.wrapper}>
-        <div className={styles.mainTitle}>PRICES & PACKAGES</div>
+        <div className={styles.mainTitle}>{t("mainTitle")}</div>
         <div className={styles.infoWrapper}>
           <div className={styles.buttons}>
             <div
@@ -84,9 +84,9 @@ export const Acordion = () => {
               {t("adults")}
             </div>
             {selectedCategory === "adults" ? (
-              <div className={styles.miniInfo}> *Age 15 + </div>
+              <div className={styles.miniInfo}> {t("miniInfo1")} </div>
             ) : (
-              <div className={styles.miniInfo}> *Up to 15 y.o. </div>
+              <div className={styles.miniInfo}> {t("miniInfo2")} </div>
             )}
           </div>
           <div className={styles.accordion}>
@@ -107,7 +107,7 @@ export const Acordion = () => {
                   )}
                   <div className={styles.button}>
                     {" "}
-                    <Link href={"/register-here"}>REGISTER NOW </Link>{" "}
+                    <Link href={"/register-here"}>{t("register")} </Link>{" "}
                   </div>
                 </div>
                 <div className={styles.titleWrapper}>
@@ -118,9 +118,9 @@ export const Acordion = () => {
           </div>
         </div>
         <div className={styles.contact}>
-          Have a question?{" "}
+          {t("contactTitle")}
           <div className={styles.buttonContact}>
-            <Link href={"#contact"}>CONTACT US </Link>
+            <Link href={"#contact"}>{t("contactButton")} </Link>
           </div>{" "}
         </div>
       </div>

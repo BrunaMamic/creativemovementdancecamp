@@ -8,6 +8,7 @@ import { League_Spartan } from "next/font/google";
 import local from "next/font/local";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/react";
 
 const sans = Open_Sans({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

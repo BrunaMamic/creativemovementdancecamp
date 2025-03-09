@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 interface TimeDisplayValuesType {
   days: number;
@@ -39,6 +40,8 @@ const Counter = ({ displayValue, label }: CounterType) => (
 );
 
 export default function CounterTime() {
+  const t = useTranslations("counter");
+
   // Use null as initial state to indicate we haven't calculated time yet
   const [timeDisplay, setTimeDisplay] = useState<TimeDisplayValuesType | null>(
     null
@@ -72,16 +75,16 @@ export default function CounterTime() {
     <div className={styles.app}>
       <div className={styles.wrapper}>
         <section className={styles.container}>
-          <header className={styles.mainTitle}>Are you coming?</header>
+          <header className={styles.mainTitle}>{t("mainTitle")}</header>
           <div className={styles.wrapper2}>
-            <Counter displayValue={timeDisplay.days} label={"Days"} />
-            <Counter displayValue={timeDisplay.hours} label={"Hours"} />
-            <Counter displayValue={timeDisplay.minutes} label={"Minutes"} />
-            <Counter displayValue={timeDisplay.seconds} label={"Seconds"} />
+            <Counter displayValue={timeDisplay.days} label={t("days")} />
+            <Counter displayValue={timeDisplay.hours} label={t("hours")} />
+            <Counter displayValue={timeDisplay.minutes} label={t("minutes")} />
+            <Counter displayValue={timeDisplay.seconds} label={t("seconds")} />
           </div>
         </section>
         <div className={styles.socials}>
-          <div className={styles.socTitle}>Check us out </div>
+          <div className={styles.socTitle}>{t("socials")} </div>
           <div className={styles.icons}>
             <Link
               href={"https://www.instagram.com/creative_move_camp/"}

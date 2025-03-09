@@ -5,8 +5,10 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import { usePathname as useNextPath } from "next/navigation";
 import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
+  const t = useTranslations("navbar");
   const [menuOpen, setMenuOpen] = useState(false);
   const pathWithLocale = useNextPath();
   const getLng = pathWithLocale.includes("hr") ? "hr" : "en";
@@ -45,29 +47,29 @@ const Navbar = () => {
         </div>
         <ul className={styles.navLinks}>
           <li>
-            <Link href="/#creative-lineup">CREATIVE LINEUP</Link>
+            <Link href="/#creative-lineup">{t("link1")}</Link>
           </li>
           <li>
-            <Link href="/#schedule">SCHEDULE</Link>
+            <Link href="/#schedule">{t("link2")}</Link>
           </li>
           <li>
-            <Link href="/#location">LOCATION</Link>
+            <Link href="/#location">{t("link3")}</Link>
           </li>
           <li>
-            <Link href="/#prices">PRICES & PACKAGES</Link>
+            <Link href="/#prices">{t("link4")}</Link>
           </li>
           <li>
-            <Link href="/#about">ABOUT US</Link>
+            <Link href="/#about">{t("link5")}</Link>
           </li>
           <li>
-            <Link href="/#accommodation">ACCOMMODATION</Link>
+            <Link href="/#accommodation">{t("link6")}</Link>
           </li>
           <li>
-            <Link href="/#contact">CONTACT US</Link>
+            <Link href="/#contact">{t("link7")}</Link>
           </li>
           <li>
             <Link href="/register-here" className={styles.register}>
-              REGISTER HERE
+              {t("link8")}
             </Link>
           </li>
           <div className={`${styles.languageWrapper}`}>
@@ -109,37 +111,37 @@ const Navbar = () => {
         <ul>
           <li>
             <Link href="/#creative-lineup" onClick={() => setMenuOpen(false)}>
-              CREATIVE LINEUP
+              {t("link1")}
             </Link>
           </li>
           <li>
             <Link href="/#schedule" onClick={() => setMenuOpen(false)}>
-              SCHEDULE
+              {t("link2")}
             </Link>
           </li>
           <li>
             <Link href="/#location" onClick={() => setMenuOpen(false)}>
-              LOCATION
+              {t("link3")}
             </Link>
           </li>
           <li>
             <Link href="/#prices" onClick={() => setMenuOpen(false)}>
-              PRICES & PACKAGES
+              {t("link4")}
             </Link>
           </li>
           <li>
             <Link href="/#about" onClick={() => setMenuOpen(false)}>
-              ABOUT US
+              {t("link5")}
             </Link>
           </li>
           <li>
             <Link href="/#accommodation" onClick={() => setMenuOpen(false)}>
-              ACCOMMODATION
+              {t("link6")}
             </Link>
           </li>
           <li>
             <Link href="/#contact" onClick={() => setMenuOpen(false)}>
-              CONTACT US
+              {t("link7")}
             </Link>
           </li>
           <li>
@@ -147,7 +149,7 @@ const Navbar = () => {
               href="/register-here"
               className={styles.register}
               onClick={() => setMenuOpen(false)}>
-              REGISTER HERE
+              {t("link8")}
             </Link>
           </li>
           <div className={`${styles.languageWrapper}`}>
