@@ -38,12 +38,14 @@ const Navbar = () => {
       <nav
         className={`${styles.navbar} ${isVisible ? styles.visible : styles.hidden}`}>
         <div className={styles.logo}>
-          <Image
-            src={"/static/whiteLogo.png"}
-            alt="logo"
-            width={83}
-            height={80}
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/static/whiteLogo.png"}
+              alt="logo"
+              width={83}
+              height={80}
+            />
+          </Link>
         </div>
         <ul className={styles.navLinks}>
           <li>

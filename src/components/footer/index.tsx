@@ -3,24 +3,29 @@
 import { Link } from "@/i18n/routing";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
+  const t = useTranslations("footer");
   return (
     <div className={styles.mainWrapper}>
       <div className={styles.basic}>
-        <div className={styles.title}>CREATIVE MOVEMENT DANCE CAMP</div>
+        <div className={styles.title}>{t("title")}</div>
         <div className={styles.date}>16.7 - 20.7. 2025</div>
-        <div className={styles.date}>SPLIT, CROATIA</div>
+        <div className={styles.date}>{t("loc")}</div>
 
         <div className={styles.register}>
-          <Link href={"/register-here"}>REGISTER HERE</Link>
+          <Link href={"/register-here"}>{t("button")}</Link>
         </div>
-        <div className={styles.terms}>TERMS & CONDITIONS</div>
+        <div className={styles.terms}>
+          {" "}
+          <Link href={"/terms-and-conditions"}>{t("terms")}</Link>
+        </div>
       </div>
 
       <div className={styles.socials}>
         <div className={styles.connect}>
-          CONNECT WITH US{" "}
+          {t("connect")}{" "}
           <Link
             href={"https://www.instagram.com/creative_move_camp/"}
             target="_blank"
@@ -50,6 +55,7 @@ export const Footer = () => {
             </div>
           </Link>
           <div
+            style={{ cursor: "pointer" }}
             onClick={() =>
               window.open(
                 `whatsapp://send?text=Hi There! I have a question about...&phone=+385919464064`
@@ -64,9 +70,7 @@ export const Footer = () => {
               />
             </div>
           </div>
-          <span className={styles.miniInfo}>
-            *available from Mon to Fri: 12 - 18h
-          </span>
+          <span className={styles.miniInfo}>{t("miniInfo")}</span>
         </div>
       </div>
     </div>

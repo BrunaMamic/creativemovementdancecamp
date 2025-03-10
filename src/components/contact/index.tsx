@@ -55,17 +55,14 @@ export const ContactForm = () => {
   return (
     <div className={`${styles.formWrapper}`} id="contact">
       <div className={styles.wrapper}>
-        <div className={styles.title}>Have a question?</div>
+        <div className={styles.title}>{t("mainTitle")}</div>
         <div className={styles.formMainWrapper}>
           <form
             className={`${styles.form}`}
             onSubmit={(e) => e.preventDefault()}
             id="contact-form">
             <div className={styles.mainTitle}>
-              <div className={styles.text}>
-                We’d love to hear from you. Please provide your details, and our
-                team will reach out as soon as possible.
-              </div>
+              <div className={styles.text}>{t("text")}</div>
             </div>
             <div className={styles.row}>
               <div className={styles.inputGroup}>
@@ -155,7 +152,7 @@ export const ContactForm = () => {
                         formData.description
                       )
                     }>
-                    Send a message
+                    {t("button")}
                   </button>
                 )}
               </div>

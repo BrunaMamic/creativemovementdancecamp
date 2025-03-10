@@ -25,6 +25,32 @@
     "text": "„Budi otvorenog uma, riskiraj i pomiči svoje granice! Jedva čekamo da te vidimo tamo i budemo dio ovog nevjerojatnog putovanja zajedno!“  -Monika.",
     "text2": "GDJE SE KREATIVNOST SUSREĆE S POKRETOM"
   },
+  "accommodation": {
+    "mainTitle": "SMJEŠTAJ",
+    "text1": "Hostel ONE",
+    "text2": "je savršeno mjesto za boravak za putnike koji traže izvrsno iskustvo hostela po pristupačnoj cijeni na vrhunskoj lokaciji u starom gradu. Smješten unutar Dioklecijanove palače i tik uz splitsku Rivu – nalazite se na kratkoj pješačkoj udaljenosti od svih atrakcija i restorana koje stari grad nudi.",
+    "button": "KLIKNITE ZA VIŠE INFORMACIJA"
+  },
+  "organizer": {
+    "mainTitle": "ORGANIZATOR",
+    "name": "Monika Veselčić",
+    "text1": "Ona je strastvena plesna pedagoginja i organizatorica iza Creative Movement Summer Dance Campa, koji se po prvi put širi na novu lokaciju u Splitu, Hrvatska. S godinama iskustva u organiziranju uspješnih plesnih kampova, Monika je stekla reputaciju osobe koja okuplja plesnu zajednicu.",
+    "text2": " Duboko je posvećena edukaciji i razvoju, osiguravajući da plesači svih razina imaju pristup visokokvalitetnim kampovima i radionicama u srcu Europe, smještenim na prekrasnoj obali.",
+    "text3": " Njezina strast za povezivanjem ljudi temelj je svega što radi. Moniku pokreće želja da svakom plesaču pruži priliku za napredak, bez obzira na njegovo porijeklo ili iskustvo. Provela je godine putujući svijetom, gradeći znanje i veze koje su obogatile njezino razumijevanje plesa u svim njegovim oblicima. Kroz te veze postala je pouzdana figura u međunarodnoj plesnoj zajednici, služeći kao most koji plesačima omogućuje pristup najboljim resursima i prilikama. Njezina posvećenost umjetnosti, u kombinaciji s brižnim pristupom, čini njezine događaje jedinstvenim i obogaćujućim iskustvom za sve sudionike.",
+    "text4": "Monikin rad dokaz je njezine vjere u moć poštovanja, zajedništva i suradnje. Organiziranje ovih događaja vidi kao svoj životni poziv – način da podijeli svoju strast i doprinese rastu globalne plesne obitelji. Za Moniku, svaki događaj prilika je da svijetu pokaže kako ples može ujediniti, inspirirati i stvoriti trajne promjene.",
+    "more": "Pročitaj više",
+    "less": "Prikaži manje"
+  },
+  "idea": {
+    "mainTitle": "IDEJA KAMPA",
+    "text1": " Monika Veselčić’s",
+    "text2": "Creative Movement Summer Dance Camp",
+    "text3": "nudi sveobuhvatno plesno iskustvo koje obuhvaća širok spektar plesnih stilova, pružajući nešto za svakog plesača. Od suvremenog plesa i hip-hopa do baleta, freestylea, hip-hop osnova, modernog plesa, heelsa i još mnogo toga – kamp nudi raznolikost stilova prilagođenih plesačima svih razina i pozadina.",
+    "text4": " Monikina vizija je stvoriti prostor u kojem plesači mogu rasti ne samo unutar svojih odabranih stilova, već i kao umjetnici spremni istraživati mnoge aspekte plesnog svijeta. Pažljivim odabirom nacionalnih i međunarodnih plesnih pedagoga iz različitih zemalja i sredina, Monika osigurava da kamp pruža bogatu i raznoliku plesnu edukaciju, izlažući plesače različitim stilovima podučavanja, tehnikama i kulturnim perspektivama.",
+    "text5": "Okruženje kampa osmišljeno je tako da bude pozitivno i motivirajuće, s naglaskom na zabavu, kreativnost i zajedništvo. Nije riječ samo o usavršavanju tehnike – već i o uživanju u plesu, upoznavanju novih ljudi i stvaranju uspomena koje će trajati dugo nakon završetka kampa.",
+    "more": "Pročitaj više",
+    "less": "Prikaži manje"
+  },
   "lineup": {
     "button": "KLIKNITE ZA VIŠE INFORMACIJA",
     "mainTitle": "KREATIVNA POSTAVA",
@@ -102,22 +128,27 @@
     "contactButton": "KONTAKTIRAJTE NAS",
     "register": "REGISTRIRAJTE SE"
   },
-  "contact": {},
+  "contact": {
+    "mainTitle": "IMATE PITANJE?",
+    "text": "Slobodno se javite. Navedite svoje podatke i povratno ćemo odgovoriti što je prije moguće.",
+    "button": "Pošalji"
+  },
   "faq": {
-    "q1": "Who can join the Creative Movement Dance Camp?",
-    "a1": "Anyone who fits into one of the following categories is welcome to join:\n\nYoung Creatives\n- Up to age 15\n\nAdult Creatives\n- Age 15+\n- More intensive program\n- Pre-existing dance knowledge is advised, but not mandatory",
+    "mainTitle": "ČESTO POSTAVLJANA PITANJA",
+    "q1": "Tko može sudjelovati na Creative Movement Dance Campu?",
+    "a1": "Svi koji pripadaju jednoj od sljedećih kategorija su dobrodošli:\n\nMladi Kreativci\n- Do 15 godina\n\nOdrasli Kreativci\n- 15+ godina\n- Intenzivniji program\n- Prethodno plesno iskustvo je poželjno, ali nije obavezno",
 
-    "q2": "How do I make a payment?",
-    "a2": "Once we receive your online application—including your name, surname, email address, age, phone number, and chosen package—we will send you an email with payment details.\n\n**Important:**\n- Payment must be made within **3 days** of receiving the email; otherwise, your application will be considered invalid.\n- When making the payment, please include the participant’s name and chosen package as transaction details.\n\nFor inquiries regarding **payment in installments or group registrations**, please contact us via creative.movement.camp@gmail.com.",
+    "q2": "Kako mogu izvršiti uplatu?",
+    "a2": "Nakon što zaprimimo vašu online prijavu—koja uključuje vaše ime, prezime, email adresu, dob, broj telefona i odabrani paket—poslat ćemo vam email s podacima za plaćanje.\n\n**Važno:**\n- Plaćanje mora biti izvršeno unutar **3 dana** od primitka emaila, inače će vaša prijava biti poništena.\n- Prilikom uplate, molimo vas da navedete ime sudionika i odabrani paket kao detalje transakcije.\n\nZa upite o **plaćanju u ratama ili grupnim prijavama**, kontaktirajte nas putem creative.movement.camp@gmail.com.",
 
-    "q3": "What is the cancellation policy?",
-    "a3": "Once your application is submitted, you have up to **5 days** to make any changes or cancel, just in case your plans or circumstances change. After this period, refunds will no longer be available.\n• The organizer reserves the right to modify/change the line-up, schedule, and location without obligation to issue refunds.\n• Refunds are only possible if the camp is canceled by the organizer.",
+    "q3": "Koja su pravila otkazivanja?",
+    "a3": "Nakon slanja prijave, imate **5 dana** za bilo kakve izmjene ili otkazivanje u slučaju promjene planova ili okolnosti. Nakon tog razdoblja, povrat novca više neće biti moguć.\n• Organizator zadržava pravo izmjene rasporeda, lokacije i line-upa bez obveze povrata novca.\n• Povrat novca moguć je samo u slučaju otkazivanja kampa od strane organizatora.",
 
-    "q4": "Is there a group discount?",
-    "a4": "Yes! If you apply as a group (6-15 people), you are eligible for a discount:\n- **6-10 people:** 10% discount\n- **10-15 people:** 15% discount\n\nTo apply as a group, provide the names of all group members in your application.\n\n**Note:** If a member cancels, the group discount percentage may change accordingly.",
+    "q4": "Postoji li popust za grupne prijave?",
+    "a4": "Da! Ako se prijavljujete kao grupa (6-15 osoba), ostvarujete popust:\n- **6-10 osoba:** 10% popusta\n- **10-15 osoba:** 15% popusta\n\nZa grupnu prijavu, navedite imena svih članova grupe u prijavi.\n\n**Napomena:** Ako neki član otkaže sudjelovanje, postotak grupnog popusta može se promijeniti.",
 
-    "q5": "Can I get assistance with accommodation?",
-    "a5": "Yes, we provide accommodation options, but availability is limited. Please inform us in advance to secure a spot. Check the accommodation link (insert shortcut to link) and contact us via creative.movement.camp@gmail.com if you need assistance.\n\nAdditionally, **breakfast can be provided upon request** if arranged in advance."
+    "q5": "Mogu li dobiti pomoć oko smještaja?",
+    "a5": "Da, nudimo opcije smještaja, ali broj mjesta je ograničen. Molimo vas da nas kontaktirate unaprijed kako biste osigurali svoje mjesto. Pogledajte informacije o smještaju (ubaciti link) i kontaktirajte nas na creative.movement.camp@gmail.com ako trebate pomoć.\n\nTakođer, **doručak može biti osiguran na zahtjev**, ako se dogovori unaprijed."
   },
   "navbar": {
     "link1": "CREATIVE LINEUP",
@@ -128,5 +159,50 @@
     "link6": "SMJEŠTAJ",
     "link7": "KONTAKTI",
     "link8": "REGISTRACIJA"
+  },
+  "footer": {
+    "title": "CREATIVE MOVEMENT PLESNI KAMP",
+    "dates": "16.7 - 20.7. 2025",
+    "loc": "SPLIT, HRVATSKA",
+    "button": "REGISTRACIJA",
+    "terms": "UVJETI & PRAVILA",
+    "connect": "POVEŽIMO SE",
+    "miniInfo": " *dostupni smo od Pon do Pet: 12 - 18h"
+  },
+  "terms": {
+    "title": "Pravila i Smjernice Plesnog Kampa",
+    "health": {
+      "title": "1. Zdravlje i Osobna Odgovornost",
+      "point1": "Sudjelovanje je na vlastitu odgovornost u vezi s bilo kojim fizičkim ili mentalnim zdravstvenim stanjem.",
+      "point2": "Ako imate zdravstvene probleme (npr. astmu, alergije ili druge zdravstvene tegobe), morate obavijestiti organizatore prije kampa.",
+      "point3": "Organizatori nisu odgovorni za bilo kakve zdravstvene probleme koji se mogu pojaviti tijekom događaja."
+    },
+    "belongings": {
+      "title": "2. Osobne Stvari i Odgovornost",
+      "point1": "Organizatori nisu odgovorni za izgubljene, ukradene ili oštećene osobne stvari.",
+      "point2": "Sudionici trebaju paziti na svoje stvari i izbjegavati donošenje vrijednih predmeta."
+    },
+    "behavior": {
+      "title": "3. Ponašanje i Kamp Pravila",
+      "point1": "Poštovanje prema drugim sudionicima, osoblju i prostoru kampa je obavezno.",
+      "point2": "Bilo kakvo neprimjereno ili ometajuće ponašanje može rezultirati udaljenjem iz kampa.",
+      "point3": "Organizator zadržava pravo izbaciti sudionike koji ne poštuju pravila.",
+      "point4": "U tim slučajevima neće biti povrata novca."
+    },
+    "substances": {
+      "title": "4. Zabranjene Tvari",
+      "point1": "Korištenje alkohola, droga ili bilo kojih ilegalnih supstanci strogo je zabranjeno."
+    },
+    "media": {
+      "title": "5. Snimanje, Fotografiranje i Prava na Medijske Materijale",
+      "point1": "Sudjelovanjem u kampu pristajete biti snimani i fotografirani.",
+      "point2": "Svi video i audio zapisi s kampa su vlasništvo organizatora i mogu se koristiti u promotivne svrhe."
+    },
+    "privacy": {
+      "title": "6. Zaštita Podataka i Privatnost",
+      "point1": "Organizator ozbiljno shvaća sigurnost vaših osobnih podataka.",
+      "point2": "Vaši osobni podaci neće biti dijeljeni s trećim stranama bez vašeg pristanka."
+    },
+    "agreement": "Sudjelovanjem u plesnom kampu pristajete na ova pravila. Organizator zadržava pravo provoditi ih kako bi osigurao sigurnost i ugodno iskustvo za sve."
   }
 }

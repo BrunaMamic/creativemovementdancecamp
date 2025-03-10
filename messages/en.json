@@ -13,6 +13,32 @@
     "seconds": "SECONDS",
     "socials": "Let's connect"
   },
+  "organizer": {
+    "mainTitle": "THE ORGANIZER",
+    "name": "Monika Veselcic",
+    "text1": " is the passionate dance teacher and organizer behind the Creative Movement Summer Dance Camp, which is now expanding to a new location in Split, Croatia for the first time. With years of experience organizing successful dance camps, Monika has built a reputation for bringing the dance community together.",
+    "text2": " She is deeply dedicated to education and growth, ensuring that dancers of all levels have access to high-quality camps and workshops in the heart of Europe, set in a beautiful seaside location.",
+    "text3": " Her passion for bringing people together is at the heart of everything she does. Monika is driven by a desire to giveevery dancer the possibility to thrive, regardless of their background or experience level. She has spent years traveling the world, building knowledge and connections that haveenriched her understanding of dance in all its forms. Throughthese connections, Monika has become a trusted figure in the international dance community, a bridge for dancers to accesssome of the best resources and opportunities available. Her dedication to the art form, combined with her caring approach, makes her events a unique and enriching experience for all whoattend.",
+    "text4": "Monika’s work is a testament to her belief in the power of respect, community, and collaboration. She sees organizing these events as her purpose, a way to share her passion and contribute to the growth of the global dance family. For Monika, every event is a chance to show the world how dance can unite, inspire, and create lasting change.",
+    "more": "Read more",
+    "less": "Show less"
+  },
+  "idea": {
+    "mainTitle": "CAMP IDEA",
+    "text1": " Monika Veselcic’s",
+    "text2": "Creative Movement Summer Dance Camp",
+    "text3": "offers a comprehensive training experience that covers a wide array of dance styles, providing something for every dancer. From contemporary and hip-hop to ballet, freestyle and hip-hop basics, modern, heels and more, the camp offers diverse styles that cater to dancers of all levels and backgrounds.",
+    "text4": " Monika’s vision is to provide a space where dancers can grow not only in their chosen styles but also as artists, ready to explore the many facets of the dance world. By carefully selecting national and international dance teachers from various countries and backgrounds, Monika ensures that the camp offers a rich and varied dance education, exposing dancers to different teaching styles, techniques, and cultural perspectives.",
+    "text5": "The camp’s environment is designed to be positive and motivating, with an emphasis on fun, creativity and community. It’s not just about perfecting technique—it’s about having a great time, meeting new people, and creating memories that will last long after the camp ends.",
+    "more": "Read more",
+    "less": "Show less"
+  },
+  "accommodation": {
+    "mainTitle": "ACCOMMODATION",
+    "text1": "Hostel ONE",
+    "text2": "is the perfect place to stay for travelers who are looking for great value hostel experience in a premium location in old town. Located within Diocletian palace and just next to Split Riva – you are short walking distance from all the attractions and restaurants that old town has to offer.",
+    "button": "CLICK TO READ MORE"
+  },
   "slider": {
     "element1": "CREATIVES LINE-UP",
     "element2": "DANCE ALL STYLE BATTLE 1 VS 1",
@@ -98,8 +124,13 @@
     "contactButton": "CONTACT US",
     "register": "REGISTER HERE"
   },
-  "contact": {},
+  "contact": {
+    "mainTitle": "HAVE A QUESTION?",
+    "text": "We’d love to hear from you. Please provide your details, and our team will reach out as soon as possible.",
+    "button": "Send"
+  },
   "faq": {
+    "mainTitle": "FREQUENTLY ASKED QUESTIONS",
     "q1": "Who can join the Creative Movement Dance Camp?",
     "a1": "Anyone who fits into one of the following categories is welcome to join:\n\nYoung Creatives\n- Up to age 15\n\nAdult Creatives\n- Age 15+\n- More intensive program\n- Pre-existing dance knowledge is advised, but not mandatory",
 
@@ -124,5 +155,50 @@
     "link6": "ACCOMMODATION",
     "link7": "CONTACT US",
     "link8": "REGISTER HERE"
+  },
+  "footer": {
+    "title": "CREATIVE MOVEMENT DANCE CAMP",
+    "dates": "16.7 - 20.7. 2025",
+    "loc": "SPLIT, CROATIA",
+    "button": "REGISTER HERE",
+    "terms": "TERMS & CONDITIONS",
+    "connect": "CONNECT WITH US",
+    "miniInfo": " *available from Mon to Fri: 12 - 18h"
+  },
+  "terms": {
+    "title": "Creative Movement Dance Camp Rules & Guidelines",
+    "health": {
+      "title": "1. Health & Personal Responsibility",
+      "point1": "Participation is at your own risk regarding any physical or mental health conditions.",
+      "point2": "If you have any medical conditions (e.g., asthma, allergies, or other health concerns), you must inform the organizers before the camp.",
+      "point3": "The organizers are not liable for any health-related issues that may occur during the event."
+    },
+    "belongings": {
+      "title": "2. Personal Belongings & Liability",
+      "point1": "The organizers are not responsible for any lost, stolen, or damaged personal items.",
+      "point2": "Participants should take care of their belongings and avoid bringing valuable items."
+    },
+    "behavior": {
+      "title": "3. Behavior & Camp Conduct",
+      "point1": "Respectful behavior towards other participants, staff, and the camp venue is mandatory.",
+      "point2": "Any form of inappropriate or disruptive behavior may result in removal from the camp.",
+      "point3": "The organizer reserves the right to expel participants who do not stick to the rules.",
+      "point4": "No refunds will be issued in any of these cases."
+    },
+    "substances": {
+      "title": "4. Prohibited Substances",
+      "point1": "The use of alcohol, drugs, or any other illegal substances is strictly prohibited."
+    },
+    "media": {
+      "title": "5. Filming, Photography & Media Rights",
+      "point1": "By participating in the camp, you consent to being filmed and photographed.",
+      "point2": "All video and audio recordings from the camp are the property of the organizer and may be used for promotional purposes."
+    },
+    "privacy": {
+      "title": "6. Data Protection & Privacy",
+      "point1": "The organizer takes the security of your personal information seriously.",
+      "point2": "Your personal data will not be shared with third parties without your consent."
+    },
+    "agreement": "By attending the dance camp, you agree to these terms. The organizer reserves the right to enforce these rules to ensure a safe and enjoyable experience for everyone."
   }
 }
