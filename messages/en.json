@@ -7,7 +7,7 @@
   },
   "counter": {
     "mainTitle": "SEE YOU FOR ...",
-    "days": "DAZ",
+    "days": "DAY",
     "hours": "HOUR",
     "minutes": "MINUTES",
     "seconds": "SECONDS",
@@ -117,6 +117,8 @@
     "adults": "CREATIVE ADULTS"
   },
   "accordion": {
+    "juniors": "CREATIVE JUNIORS",
+    "adults": "CREATIVE ADULTS",
     "mainTitle": "PRICES & PACKAGES",
     "miniInfo1": "*Age 15 +",
     "miniInfo2": "*Up to 15 y.o.",

@@ -3,6 +3,8 @@
   background-color: var(--background);
   color: var(--orange);
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 200px 0;
   width: 100%;
   height: 100%;
@@ -93,16 +95,20 @@
   display: flex;
   flex-direction: column;
   font-family: "JetBrains Mono", monospace;
-  font-size: clamp(1rem, 8vw, 99rem);
+  font-size: 90px;
   font-weight: 100;
   line-height: 1;
   padding: 2vw;
   text-align: center;
 
+  @media screen and (max-width: 900px) {
+    font-size: 40px;
+  }
+
   h2 {
     color: var(--orange);
     font-family: var(--sego);
-    font-size: clamp(1rem, 2vw, 99rem);
+    font-size: 40px;
     font-weight: 300;
     letter-spacing: 0.1875em;
     margin: 1.25rem 0 0;
@@ -112,5 +118,9 @@
     text-transform: uppercase;
     white-space: nowrap;
     width: 100%;
+
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
+    }
   }
 }
