@@ -46,6 +46,7 @@ export const ContactForm = () => {
         };
 
         console.log(dataToSend);
+        setSuccess(1);
       } else {
         console.error("Form is not valid");
       }
