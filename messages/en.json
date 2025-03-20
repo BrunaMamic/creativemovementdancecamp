@@ -116,6 +116,12 @@
     "juniors": "CREATIVE JUNIORS",
     "adults": "CREATIVE ADULTS"
   },
+  "studio": {
+    "mainTitle": "STUDIO"
+  },
+  "maps": {
+    "mainTitle": "LOCATION"
+  },
   "accordion": {
     "juniors": "CREATIVE JUNIORS",
     "adults": "CREATIVE ADULTS",

@@ -133,6 +133,9 @@
     "text": "Slobodno se javite. Navedite svoje podatke i povratno ćemo odgovoriti što je prije moguće.",
     "button": "Pošalji"
   },
+  "maps": {
+    "mainTitle": "LOKACIJA"
+  },
   "faq": {
     "mainTitle": "ČESTO POSTAVLJANA PITANJA",
     "q1": "Tko može sudjelovati na Creative Movement Dance Campu?",

@@ -10,8 +10,10 @@ import { Lineup } from "@/components/lineup";
 import Navbar from "@/components/navbar";
 import { Organizer } from "@/components/organizer";
 import { Schedule } from "@/components/schedule";
+import { Studio } from "@/components/studio";
 import { TextSection } from "@/components/textSection";
 import { TextSectionV2 } from "@/components/textSectionV2";
+import { Map } from "@/components/maps";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
       <TextSection />
       <CampIdea />
       <Accomodation />
+      <Map />
+      <Studio />
       <Faq />
       <ContactForm />
       <Footer />
