@@ -19,39 +19,73 @@ export const ContactForm = () => {
     return regex.test(email);
   };
 
+  // const handleSubmit = async () => {
+  //   const formElement: HTMLFormElement = document.getElementById(
+  //     "contact-form"
+  //   ) as HTMLFormElement;
+  //
+  //   if (formElement) {
+  //     let isValid = true;
+  //     const regex = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+  //
+  //     if (!formData.name || !regex.test(formElement.email.value)) {
+  //       isValid = false;
+  //     }
+  //
+  //     if (isValid) {
+  //       const form = new FormData();
+  //
+  //       form.append("name", formElement.Name.value);
+  //       form.append("email", formElement.email.value);
+  //       form.append("description", formElement.description.value);
+  //
+  //       const dataToSend = {
+  //         name: formElement.Name.value,
+  //         email: formElement.email.value,
+  //         description: formElement.description.value,
+  //       };
+  //
+  //       console.log(dataToSend);
+  //       setSuccess(1);
+  //     } else {
+  //       console.error("Form is not valid");
+  //     }
+  //   }
+  // };
+
   const handleSubmit = async () => {
-    const formElement: HTMLFormElement = document.getElementById(
-      "contact-form"
-    ) as HTMLFormElement;
+    if (!formData.name || !validateEmail(formData.email) || !formData.description) {
+      console.error("Form is not valid");
+      return;
+    }
 
-    if (formElement) {
-      let isValid = true;
-      const regex = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      if (!formData.name || !regex.test(formElement.email.value)) {
-        isValid = false;
-      }
+      console.log("Raw Response:", response);
 
-      if (isValid) {
-        const form = new FormData();
+      const text = await response.text();
+      console.log("Response Body:", text);
 
-        form.append("name", formElement.Name.value);
-        form.append("email", formElement.email.value);
-        form.append("description", formElement.description.value);
+      // Try parsing only if response is not empty
+      const result = text ? JSON.parse(text) : {};
 
-        const dataToSend = {
-          name: formElement.Name.value,
-          email: formElement.email.value,
-          description: formElement.description.value,
-        };
-
-        console.log(dataToSend);
+      if (response.ok) {
         setSuccess(1);
+        setFormData({ name: "", email: "", description: "" });
       } else {
-        console.error("Form is not valid");
+        console.error("Error:", result.error);
       }
+    } catch (error) {
+      console.error("Error submitting form", error);
     }
   };
+
+
 
   return (
     <div className={`${styles.formWrapper}`} id="contact">

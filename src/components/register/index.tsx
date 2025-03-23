@@ -73,48 +73,96 @@ export const Register = () => {
     return regex.test(email);
   };
 
-  const handleSubmit = async () => {
-    let isValid = true;
-    const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  // const handleSubmit = async () => {
+  //   let isValid = true;
+  //   const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  //
+  //   if (
+  //     !formData.name ||
+  //     !regex.test(formData.email) ||
+  //     !formData.phone ||
+  //     !formData.birthday ||
+  //     !formData.category ||
+  //     !formData.package
+  //   ) {
+  //     isValid = false;
+  //   }
+  //
+  //   if (isValid) {
+  //     const form = new FormData();
+  //
+  //     form.append("name", formData.name);
+  //     form.append("email", formData.email);
+  //     form.append("phone", formData.phone);
+  //     form.append("birthday", formData.birthday);
+  //     form.append("category", formData.category);
+  //     form.append("package", formData.package);
+  //     form.append("description", formData.description);
+  //
+  //     const dataToSend = {
+  //       name: formData.name,
+  //       email: formData.email,
+  //       phone: formData.phone,
+  //       birthday: formData.birthday,
+  //       category: formData.category,
+  //       package: formData.package,
+  //       description: formData.description,
+  //     };
+  //     setSuccess(1);
+  //
+  //     console.log(dataToSend);
+  //   } else {
+  //     console.error("Form is not valid");
+  //   }
+  // };
 
+
+  const handleSubmit = async () => {
     if (
-      !formData.name ||
-      !regex.test(formData.email) ||
-      !formData.phone ||
-      !formData.birthday ||
-      !formData.category ||
-      !formData.package
+        !formData.name ||
+        !validateEmail(formData.email) ||
+        !formData.phone ||
+        !formData.birthday ||
+        !formData.category ||
+        !formData.package
     ) {
-      isValid = false;
+      console.error("Form is not valid");
+      return;
     }
 
-    if (isValid) {
-      const form = new FormData();
+    const dataToSend = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      birthday: formData.birthday,
+      category: formData.category,
+      package: formData.package,
+      description: formData.description || "", // Avoid undefined
+    };
 
-      form.append("name", formData.name);
-      form.append("email", formData.email);
-      form.append("phone", formData.phone);
-      form.append("birthday", formData.birthday);
-      form.append("category", formData.category);
-      form.append("package", formData.package);
-      form.append("description", formData.description);
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend),
+      });
 
-      const dataToSend = {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        birthday: formData.birthday,
-        category: formData.category,
-        package: formData.package,
-        description: formData.description,
-      };
-      setSuccess(1);
+      const text = await response.text();
+      console.log("Raw Response:", text);
 
-      console.log(dataToSend);
-    } else {
-      console.error("Form is not valid");
+      const result = text ? JSON.parse(text) : {};
+
+      if (response.ok) {
+        setSuccess(1);
+        console.log("Registration successful:", result);
+      } else {
+        console.error("Registration failed:", result.error);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
     }
   };
+
 
   return (
     <div className={styles.formWrapper}>
