@@ -7,7 +7,7 @@
   },
   "counter": {
     "mainTitle": "VIDIMO SE ZA ...",
-    "days": "DAN",
+    "days": "DANA",
     "hours": "SAT",
     "minutes": "MINUTE",
     "seconds": "SEKUNDE",
@@ -122,8 +122,8 @@
     "juniors": "KREATIVNI JUNIORI",
     "adults": "KREATIVNI SENIORI",
     "mainTitle": "CIJENE & PAKETI",
-    "miniInfo1": "*Od 15+ godina",
-    "miniInfo2": "Do 15 godina",
+    "miniInfo1": "*od 15+ godina",
+    "miniInfo2": "*do 15 godina",
     "contactTitle": "Imate pitanje?",
     "contactButton": "KONTAKTIRAJTE NAS",
     "register": "REGISTRIRAJTE SE"
@@ -139,20 +139,50 @@
   "faq": {
     "mainTitle": "ČESTO POSTAVLJANA PITANJA",
     "q1": "Tko može sudjelovati na Creative Movement Dance Campu?",
-    "a1": "Svi koji pripadaju jednoj od sljedećih kategorija su dobrodošli:\n\nMladi Kreativci\n- Do 15 godina\n\nOdrasli Kreativci\n- 15+ godina\n- Intenzivniji program\n- Prethodno plesno iskustvo je poželjno, ali nije obavezno",
-
+    "a1": {
+      "intro": "Svi koji spadaju u jednu od sljedećih kategorija su dobrodošli:",
+      "youngCreatives": {
+        "title": "Mladi Kreativci",
+        "description": "• Do 15 godina"
+      },
+      "adultCreatives": {
+        "title": "Odrasli Kreativci",
+        "description1": "• Od 15 godina na dalje",
+        "description2": "• Intenzivniji program",
+        "description3": "• Prethodno znanje je preporučeno, ali nije obavezno"
+      }
+    },
     "q2": "Kako mogu izvršiti uplatu?",
-    "a2": "Nakon što zaprimimo vašu online prijavu—koja uključuje vaše ime, prezime, email adresu, dob, broj telefona i odabrani paket—poslat ćemo vam email s podacima za plaćanje.\n\n**Važno:**\n- Plaćanje mora biti izvršeno unutar **3 dana** od primitka emaila, inače će vaša prijava biti poništena.\n- Prilikom uplate, molimo vas da navedete ime sudionika i odabrani paket kao detalje transakcije.\n\nZa upite o **plaćanju u ratama ili grupnim prijavama**, kontaktirajte nas putem creative.movement.camp@gmail.com.",
-
+    "a2": {
+      "important": "VAŽNO",
+      "intro": "Nakon što primimo vašu online prijavu koja uključuje vaše ime, prezime, adresu e-pošte, dob, broj telefona i odabrani paket—poslat ćemo vam e-mail s podacima za uplatu.",
+      "paymentDeadline": "Uplata mora biti izvršena unutar 3 dana od primitka e-maila; u suprotnom, vaša prijava bit će smatrana nevažećom.",
+      "transactionDetails": "Prilikom izvršenja uplate, molimo vas da u transakcijskim podacima navedete ime sudionika i odabrani paket.",
+      "inquiries": "Za upite vezane uz uplatu na rate ili grupne prijave, molimo kontaktirajte nas putem creative.movement.camp@gmail.com."
+    },
     "q3": "Koja su pravila otkazivanja?",
-    "a3": "Nakon slanja prijave, imate **5 dana** za bilo kakve izmjene ili otkazivanje u slučaju promjene planova ili okolnosti. Nakon tog razdoblja, povrat novca više neće biti moguć.\n• Organizator zadržava pravo izmjene rasporeda, lokacije i line-upa bez obveze povrata novca.\n• Povrat novca moguć je samo u slučaju otkazivanja kampa od strane organizatora.",
-
+    "a3": {
+      "modificationPeriod": "Nakon što vaša prijava bude poslana, imate do 5 dana da izvršite bilo kakve promjene ili otkažete, u slučaju da se vaši planovi ili okolnosti promijene. Nakon tog razdoblja, povrati neće biti mogući.",
+      "organizerRights": "Organizator zadržava pravo izmjene/promjene line-up-a, rasporeda i lokacije bez obveze izdavanja povrata.",
+      "refundPolicy": "Povrati su mogući samo ako je kamp otkazan od strane organizatora."
+    },
     "q4": "Postoji li popust za grupne prijave?",
-    "a4": "Da! Ako se prijavljujete kao grupa (6-15 osoba), ostvarujete popust:\n- **6-10 osoba:** 10% popusta\n- **10-15 osoba:** 15% popusta\n\nZa grupnu prijavu, navedite imena svih članova grupe u prijavi.\n\n**Napomena:** Ako neki član otkaže sudjelovanje, postotak grupnog popusta može se promijeniti.",
-
+    "a4": {
+      "intro": "Da! Ako se prijavite kao grupa (6-15 osoba), imate pravo na popust:",
+      "discount6to10": "• 6-10 osoba: 10% popusta",
+      "discount10to15": "• 10-15 osoba: 15% popusta",
+      "groupApplication": "Za prijavu kao grupa, navedite imena svih članova grupe u svojoj prijavi.",
+      "note": "Napomena: Ako član otkaže, postotak grupnog popusta može se promijeniti u skladu s tim."
+    },
     "q5": "Mogu li dobiti pomoć oko smještaja?",
-    "a5": "Da, nudimo opcije smještaja, ali broj mjesta je ograničen. Molimo vas da nas kontaktirate unaprijed kako biste osigurali svoje mjesto. Pogledajte informacije o smještaju (ubaciti link) i kontaktirajte nas na creative.movement.camp@gmail.com ako trebate pomoć.\n\nTakođer, **doručak može biti osiguran na zahtjev**, ako se dogovori unaprijed."
-  },
+    "a5": {
+      "intro": "Da, pružamo opcije smještaja, ali dostupnost je ograničena. Molimo vas da nas unaprijed obavijestite kako biste osigurali mjesto.",
+      "link": "Pogledajte web stranicu smještaja ",
+      "link2": "i kontaktirajte nas putem creative.movement.camp@gmail.com ako vam je potrebna pomoć.",
+      "breakfast1": "Dodatno,",
+      "breakfast2": "doručak se može osigurati na zahtjev",
+      "breakfast3": "ako je dogovoren unaprijed"
+    }  },
   "navbar": {
     "link1": "CREATIVE LINEUP",
     "link2": "RASPORED",

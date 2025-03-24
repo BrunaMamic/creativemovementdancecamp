@@ -6,8 +6,8 @@
     "title4": "16 - 20 JULY"
   },
   "counter": {
-    "mainTitle": "SEE YOU FOR ...",
-    "days": "DAY",
+    "mainTitle": "SEE YOU IN ...",
+    "days": "DAYS",
     "hours": "HOUR",
     "minutes": "MINUTES",
     "seconds": "SECONDS",
@@ -15,7 +15,7 @@
   },
   "organizer": {
     "mainTitle": "THE ORGANIZER",
-    "name": "Monika Veselcic",
+    "name": "Monika Veselčić",
     "text1": " is the passionate dance teacher and organizer behind the Creative Movement Summer Dance Camp, which is now expanding to a new location in Split, Croatia for the first time. With years of experience organizing successful dance camps, Monika has built a reputation for bringing the dance community together.",
     "text2": " She is deeply dedicated to education and growth, ensuring that dancers of all levels have access to high-quality camps and workshops in the heart of Europe, set in a beautiful seaside location.",
     "text3": " Her passion for bringing people together is at the heart of everything she does. Monika is driven by a desire to giveevery dancer the possibility to thrive, regardless of their background or experience level. She has spent years traveling the world, building knowledge and connections that haveenriched her understanding of dance in all its forms. Throughthese connections, Monika has become a trusted figure in the international dance community, a bridge for dancers to accesssome of the best resources and opportunities available. Her dedication to the art form, combined with her caring approach, makes her events a unique and enriching experience for all whoattend.",
@@ -140,20 +140,52 @@
   "faq": {
     "mainTitle": "FREQUENTLY ASKED QUESTIONS",
     "q1": "Who can join the Creative Movement Dance Camp?",
-    "a1": "Anyone who fits into one of the following categories is welcome to join:\n\nYoung Creatives\n- Up to age 15\n\nAdult Creatives\n- Age 15+\n- More intensive program\n- Pre-existing dance knowledge is advised, but not mandatory",
-
+    "a1": {
+      "intro": "Anyone who fits into one of the following categories is welcome to join:",
+      "youngCreatives": {
+        "title": "Young Creatives",
+        "description": "• Up to age 15"
+      },
+      "adultCreatives": {
+        "title": "Adult Creatives",
+        "description1": "• Age 15+",
+        "description2": "• More intensive program",
+        "description3": "• Pre-existing dance knowledge is advised, but not mandatory"
+      }
+    },
     "q2": "How do I make a payment?",
-    "a2": "Once we receive your online application—including your name, surname, email address, age, phone number, and chosen package—we will send you an email with payment details.\n\n**Important:**\n- Payment must be made within **3 days** of receiving the email; otherwise, your application will be considered invalid.\n- When making the payment, please include the participant’s name and chosen package as transaction details.\n\nFor inquiries regarding **payment in installments or group registrations**, please contact us via creative.movement.camp@gmail.com.",
+    "a2": {
+      "important": "IMPORTANT",
+      "intro": "Once we receive your online application—including your name, surname, email address, age, phone number, and chosen package—we will send you an email with payment details.",
+      "paymentDeadline": "Payment must be made within 3 days of receiving the email; otherwise, your application will be considered invalid.",
+      "transactionDetails": "When making the payment, please include the participant’s name and chosen package as transaction details.",
+      "inquiries": "For inquiries regarding payment in installments or group registrations, please contact us via creative.movement.camp@gmail.com."
+    },
 
     "q3": "What is the cancellation policy?",
-    "a3": "Once your application is submitted, you have up to **5 days** to make any changes or cancel, just in case your plans or circumstances change. After this period, refunds will no longer be available.\n• The organizer reserves the right to modify/change the line-up, schedule, and location without obligation to issue refunds.\n• Refunds are only possible if the camp is canceled by the organizer.",
+    "a3": {
+      "modificationPeriod": "Once your application is submitted, you have up to 5 days to make any changes or cancel, just in case your plans or circumstances change. After this period, refunds will no longer be available.",
+      "organizerRights": "The organizer reserves the right to modify/change the line-up, schedule, and location without obligation to issue refunds.",
+      "refundPolicy": "Refunds are only possible if the camp is canceled by the organizer."
+    },
 
     "q4": "Is there a group discount?",
-    "a4": "Yes! If you apply as a group (6-15 people), you are eligible for a discount:\n- **6-10 people:** 10% discount\n- **10-15 people:** 15% discount\n\nTo apply as a group, provide the names of all group members in your application.\n\n**Note:** If a member cancels, the group discount percentage may change accordingly.",
-
+    "a4": {
+      "intro": "Yes! If you apply as a group (6-15 people), you are eligible for a discount:",
+      "discount6to10": "• 6-10 people: 10% discount",
+      "discount10to15": "• 10-15 people: 15% discount",
+      "groupApplication": "To apply as a group, provide the names of all group members in your application.",
+      "note": "Note: If a member cancels, the group discount percentage may change accordingly."
+    },
     "q5": "Can I get assistance with accommodation?",
-    "a5": "Yes, we provide accommodation options, but availability is limited. Please inform us in advance to secure a spot. Check the accommodation link (insert shortcut to link) and contact us via creative.movement.camp@gmail.com if you need assistance.\n\nAdditionally, **breakfast can be provided upon request** if arranged in advance."
-  },
+    "a5": {
+      "intro": "Yes, we provide accommodation options, but availability is limited. Please inform us in advance to secure a spot.",
+      "link": "Check the accommodation link ",
+      "link2": "and contact us via creative.movement.camp@gmail.com if you need assistance.",
+      "breakfast1": "Additionally,",
+      "breakfast2": "breakfast can be provided upon request",
+      "breakfast3": "if arranged in advance"
+    }  },
   "navbar": {
     "link1": "CREATIVE LINEUP",
     "link2": "SCHEDULE",

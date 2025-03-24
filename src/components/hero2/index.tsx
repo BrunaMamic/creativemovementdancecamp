@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import styles from "./styles.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
 import { CircleLogo } from "../circleLogo";
 
 export const Hero2 = () => {
@@ -16,9 +16,9 @@ export const Hero2 = () => {
         <div className={styles.title3}>{t("title3")}</div>
         <div className={styles.title4}>{t("title4")}</div>
       </div>
-      <div className={styles.image}>
-        <Image src={"/static/hero.webp"} alt={""} fill />
-      </div>
+      {/*<div className={styles.image}>*/}
+      {/*  <Image src={"/static/hero.webp"} alt={""} fill />*/}
+      {/*</div>*/}
 
       <CircleLogo />
     </div>

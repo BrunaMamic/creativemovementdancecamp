@@ -35,71 +35,74 @@ export const Lineup = () => {
         )}
         <div ref={gridRef} className={styles.grid}>
           <Card
-            image={"/static/lineup/aleksandra.webp"}
+              image={"/static/lineup/selasi1.webp"}
+              name={"card8.name"}
+              description={"card8.description"}
+              style={"card8.style"}
+          />
+          <Card
+              image={"/static/lineup/kelan1.webp"}
+              name={"card5.name"}
+              description={"card5.description"}
+              style={"card5.style"}
+          />
+          <Card
+              image={"/static/lineup/veronika1.webp"}
+              name={"card11.name"}
+              description={"card11.description"}
+              style={"card11.style"}
+          />
+          <Card
+            image={"/static/lineup/aleksandra1.webp"}
             name={"card1.name"}
             description={"card1.description"}
             style={"card1.style"}
           />
           <Card
-            image={"/static/lineup/ana.webp"}
+            image={"/static/lineup/ana1.webp"}
             description={"card2.description"}
             name={"card2.name"}
             style={"card2.style"}
           />
           <Card
-            image={"/static/lineup/barbara.webp"}
+            image={"/static/lineup/barbara1.webp"}
             name={"card3.name"}
             description={"card3.description"}
             style={"card3.style"}
           />
           <Card
-            image={"/static/lineup/danilo.webp"}
+            image={"/static/lineup/danilo1.webp"}
             name={"card4.name"}
             description={"card4.description"}
             style={"card4.style"}
           />
+
           <Card
-            image={"/static/lineup/keron.webp"}
-            name={"card5.name"}
-            description={"card5.description"}
-            style={"card5.style"}
-          />
-          <Card
-            image={"/static/lineup/monika.webp"}
+            image={"/static/lineup/monika1.webp"}
             name={"card6.name"}
             description={"card6.description"}
             style={"card6.style"}
           />
           <Card
-            image={"/static/lineup/monja.webp"}
+            image={"/static/lineup/monja1.webp"}
             name={"card7.name"}
             description={"card7.description"}
             style={"card7.style"}
           />
+
           <Card
-            image={"/static/lineup/selasi.webp"}
-            name={"card8.name"}
-            description={"card8.description"}
-            style={"card8.style"}
-          />
-          <Card
-            image={"/static/lineup/sergii.webp"}
+            image={"/static/lineup/sergi1.webp"}
             name={"card9.name"}
             description={"card9.description"}
             style={"card9.style"}
           />
           <Card
-            image={"/static/lineup/vedrana.webp"}
+            image={"/static/lineup/vedrana1.webp"}
             name={"card10.name"}
             description={"card10.description"}
             style={"card10.style"}
           />
-          <Card
-            image={"/static/lineup/veronika.webp"}
-            name={"card11.name"}
-            description={"card11.description"}
-            style={"card11.style"}
-          />
+
         </div>
       </div>
     </div>

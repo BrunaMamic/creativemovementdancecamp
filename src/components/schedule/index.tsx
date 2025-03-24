@@ -223,13 +223,9 @@ export const Schedule = () => {
           what: "Class 2",
         },
         {
-          time: "13:15 - 14:30",
-          what: "BREAK",
-        },
-        {
-          time: "14:30 - 16:00",
-          what: "Class 3",
-        },
+          time: "13:15",
+          what: "END",
+        }
       ],
     },
     {
@@ -297,12 +293,8 @@ export const Schedule = () => {
           what: "Class 2",
         },
         {
-          time: "13:15 - 14:30",
-          what: "BREAK",
-        },
-        {
-          time: "14:30 - 16:00",
-          what: "Class 3",
+          time: "13:15",
+          what: "END",
         },
       ],
     },
