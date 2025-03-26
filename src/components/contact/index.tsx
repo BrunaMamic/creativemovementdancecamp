@@ -19,40 +19,6 @@ export const ContactForm = () => {
     return regex.test(email);
   };
 
-  // const handleSubmit = async () => {
-  //   const formElement: HTMLFormElement = document.getElementById(
-  //     "contact-form"
-  //   ) as HTMLFormElement;
-  //
-  //   if (formElement) {
-  //     let isValid = true;
-  //     const regex = new RegExp("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
-  //
-  //     if (!formData.name || !regex.test(formElement.email.value)) {
-  //       isValid = false;
-  //     }
-  //
-  //     if (isValid) {
-  //       const form = new FormData();
-  //
-  //       form.append("name", formElement.Name.value);
-  //       form.append("email", formElement.email.value);
-  //       form.append("description", formElement.description.value);
-  //
-  //       const dataToSend = {
-  //         name: formElement.Name.value,
-  //         email: formElement.email.value,
-  //         description: formElement.description.value,
-  //       };
-  //
-  //       console.log(dataToSend);
-  //       setSuccess(1);
-  //     } else {
-  //       console.error("Form is not valid");
-  //     }
-  //   }
-  // };
-
   const handleSubmit = async () => {
     if (!formData.name || !validateEmail(formData.email) || !formData.description) {
       console.error("Form is not valid");
@@ -108,7 +74,7 @@ export const ContactForm = () => {
                   type="text"
                   id="Name"
                   name="name"
-                  placeholder="Name"
+                  placeholder={t('name')}
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -123,7 +89,7 @@ export const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder={t('email')}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -140,7 +106,7 @@ export const ContactForm = () => {
                 <textarea
                   id="description"
                   name="description"
-                  placeholder="What is your question?"
+                  placeholder={t('description')}
                   maxLength={1000}
                   value={formData.description}
                   onChange={(e) =>

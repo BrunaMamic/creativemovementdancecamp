@@ -58,7 +58,7 @@ export const Footer = () => {
             style={{ cursor: "pointer" }}
             onClick={() =>
               window.open(
-                `whatsapp://send?text=Hi There! I have a question about...&phone=+385919464064`
+                `whatsapp://send?text=Hi There! I have a question about...&phone=+31684925521`
               )
             }>
             <div className={styles.inst}>

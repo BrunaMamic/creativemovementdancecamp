@@ -44,8 +44,8 @@
     "element2": "DANCE ALL STYLE BATTLE 1 VS 1",
     "element3": "SPLIT, CROATIA",
     "element4": "LOREM IPSUM",
-    "element5": "CREATIVE JUNIORS",
-    "element6": "CREATIVE ADULTS"
+    "element5": "YOUNG CREATIVES",
+    "element6": "ADULT CREATIVES"
   },
   "textSection": {
     "text": "“Be open minded, take risks and push your boundaries! We can't wait to see you there and be part of this incredible journey together!”  -Monika.",
@@ -113,8 +113,8 @@
   "schedule": {
     "mainTitle": "SCHEDULE",
     "date": "JULY 2025",
-    "juniors": "CREATIVE JUNIORS",
-    "adults": "CREATIVE ADULTS"
+    "juniors": "YOUNG CREATIVES",
+    "adults": "ADULT CREATIVES"
   },
   "studio": {
     "mainTitle": "STUDIO"
@@ -123,19 +123,70 @@
     "mainTitle": "LOCATION"
   },
   "accordion": {
-    "juniors": "CREATIVE JUNIORS",
-    "adults": "CREATIVE ADULTS",
+    "juniors": "YOUNG CREATIVES",
+    "adults": "ADULT CREATIVES",
     "mainTitle": "PRICES & PACKAGES",
     "miniInfo1": "*Age 15 +",
     "miniInfo2": "*Up to 15 y.o.",
     "contactTitle": "Have a question?",
     "contactButton": "CONTACT US",
-    "register": "REGISTER HERE"
+    "register": "REGISTER HERE",
+    "adultsGroup": {
+      "class1": {
+        "name": "“MOVE FULL OUT“ - ADULT CREATIVES",
+        "number": "20 classes"
+      },
+      "class2": {
+        "name": "“MOVE ONE DAY”",
+        "number": "5 classes"
+      },
+      "class3": {
+        "name": "“DANCE SLEEP REPEAT”",
+        "number": "20 classes + 4 nights in Design Hostel One Split"
+      },
+      "class4": {
+        "name": "“BATTLE MOVERS”",
+        "number": "10 classes (17.07 - 19.07) + Battle Enterance"
+      },
+      "class5": {
+        "name": "“EARLY BIRD”",
+        "number": "20 classes",
+        "circle": "10 spots"
+      }
+    },
+    "youngGroup": {
+      "class1": {
+        "name": "“MOVE FULL OUT“ - YOUNG CREATIVES ",
+        "number": "10 classes"
+      },
+      "class2": {
+        "name": "“DANCE SLEEP REPEAT” ",
+        "number": "10 classes + 4 nights in Design Hostel One Split"
+      },
+      "class3": {
+        "name": "“EARLY BIRD”",
+        "number": "10 classes",
+        "circle": "10 spots"
+      }
+    }
+
   },
   "contact": {
     "mainTitle": "HAVE A QUESTION?",
     "text": "We’d love to hear from you. Please provide your details, and our team will reach out as soon as possible.",
-    "button": "Send"
+    "button": "Send",
+    "name": "Full name",
+    "email": "Email",
+    "description": "How can we help you?",
+    "date": "Date of birth: dd/mm/yyyy",
+    "category": "Select a category",
+    "package": "Select a package",
+    "registerDescription": "Do you have something to add?",
+    "terms1": "By registering you accept",
+    "termsLink": "terms & conditions",
+    "terms2": "of Creative Movement Dance Camp",
+    "textRegister": "Fill out the form to secure your spot!"
+
   },
   "faq": {
     "mainTitle": "FREQUENTLY ASKED QUESTIONS",

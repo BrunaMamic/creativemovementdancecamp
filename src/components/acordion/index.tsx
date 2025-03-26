@@ -17,55 +17,64 @@ export const Acordion = () => {
   // const t = useTranslations("home.accordion");
 
   const content = [
+
     {
-      name: "“MOVE FULL OUT“ - ADULT CREATIVES ",
-      info: "20 classes",
+      name: t('adultsGroup.class1.name'),
+      info: t('adultsGroup.class1.number'),
       price: "290 €",
     },
+
+
     {
-      name: "“MOVE ONE DAY” ",
-      info: "5 classes",
+      name: t('adultsGroup.class2.name'),
+      info: t('adultsGroup.class2.number'),
       price: "90 €",
     },
+
+
     {
-      name: "“DANCE SLEEP REPEAT”",
-      info: "20 classes + 4 nights in Design Hostel One Split",
+      name: t('adultsGroup.class3.name'),
+      info: t('adultsGroup.class3.number'),
       price: "490 €",
     },
+
+
     {
-      name: "“BATTLE MOVERS”",
-      info: "10 classes (17.07 - 19.07) + Battle Enterance",
+      name: t('adultsGroup.class4.name'),
+      info: t('adultsGroup.class4.number'),
       price: "190 €",
     },
+
+
     {
-      name: "“EARLY BIRD”",
-      info: "20 CLASSES ",
-      circle: "10 spots",
+      name: t('adultsGroup.class5.name'),
+      info: t('adultsGroup.class5.number'),
+      circle: t('adultsGroup.class5.circle'),
       price: "240 €",
     },
   ];
 
   const contentJr = [
     {
-      name: "“MOVE FULL OUT“ - YOUNG CREATIVES ",
-      info: "10 CLASSES ",
+      name: t('youngGroup.class1.name'),
+      info: t('youngGroup.class1.number'),
       price: "150 €",
     },
     {
-      name: "“DANCE SLEEP REPEAT”",
-      info: "10 CLASSES + 4 nights in Design Hostel One Split",
+      name: t('youngGroup.class2.name'),
+      info: t('youngGroup.class2.number'),
       price: "350 €",
     },
     {
-      name: "“EARLY BIRD”",
-      info: "10 CLASSES ",
-      circle: "10 spots",
+      name: t('youngGroup.class3.name'),
+      info: t('youngGroup.class3.number'),
+      circle: t('youngGroup.class3.circle'),
       price: "100 €",
     },
   ];
   const pricingData = selectedCategory === "adults" ? content : contentJr;
 
-  const [opened, setOpened] = useState<number>(contentJr.length - 1);
+  const [opened, setOpened] = useState<number>(0);
 
   return (
     <div className={styles.mainWrapper} id="prices">

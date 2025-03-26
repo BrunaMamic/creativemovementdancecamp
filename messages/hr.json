@@ -115,23 +115,72 @@
   "schedule": {
     "mainTitle": "RASPORED",
     "date": "SRPANJ 2025",
-    "juniors": "KREATIVNI JUNIORI",
-    "adults": "KREATIVNI SENIORI"
+    "juniors": "MLAĐI KREATIVCI",
+    "adults": "SENIORI KREATIVCI"
   },
   "accordion": {
-    "juniors": "KREATIVNI JUNIORI",
-    "adults": "KREATIVNI SENIORI",
+    "juniors": "MLAĐI KREATIVCI",
+    "adults": "SENIORI KREATIVCI",
     "mainTitle": "CIJENE & PAKETI",
     "miniInfo1": "*od 15+ godina",
     "miniInfo2": "*do 15 godina",
     "contactTitle": "Imate pitanje?",
     "contactButton": "KONTAKTIRAJTE NAS",
-    "register": "REGISTRIRAJTE SE"
+    "register": "REGISTRIRAJTE SE",
+    "adultsGroup": {
+      "class1": {
+        "name": "“MOVE FULL OUT“ - SENIORI KREATIVCI",
+        "number": "20 radionica"
+      },
+      "class2": {
+        "name": "“MOVE ONE DAY”",
+        "number": "5 radionica"
+      },
+      "class3": {
+        "name": "“DANCE SLEEP REPEAT”",
+        "number": "20 radionica + 4 noćenja u Design Hostel One Split"
+      },
+      "class4": {
+        "name": "“BATTLE MOVERS”",
+        "number": "10 radionica (17.07 - 19.07) + ulaz na battle"
+      },
+      "class5": {
+        "name": "“EARLY BIRD”",
+        "number": "20 radionica",
+        "circle": "10 mjesta"
+      }
+    },
+    "youngGroup": {
+      "class1": {
+        "name": "“MOVE FULL OUT“ - MLAĐI KREATIVCI ",
+        "number": "10 radionica"
+      },
+      "class2": {
+        "name": "“DANCE SLEEP REPEAT” ",
+        "number": "10 radionica + 4 noćenja u Design Hostel One Split"
+      },
+      "class3": {
+        "name": "“EARLY BIRD”",
+        "number": "10 radionica",
+        "circle": "10 mjesta"
+      }
+    }
   },
   "contact": {
     "mainTitle": "IMATE PITANJE?",
     "text": "Slobodno se javite. Navedite svoje podatke i povratno ćemo odgovoriti što je prije moguće.",
-    "button": "Pošalji"
+    "button": "Pošalji",
+    "name": "Ime i prezime",
+    "email": "Email",
+    "description": "Kako možemo pomoći?",
+    "date": "Datum rođenja: dd/mm/yyyy",
+    "category": "Odaberi kategoriju",
+    "package": "Odaberi paket",
+    "registerDescription": "Želite li nešto nadodati?",
+    "terms1": "Registracijom prihvaćate",
+    "termsLink": "UVJETE I PRAVILA",
+    "terms2": "Creative Movement Plesnog Kampa",
+    "textRegister": "Ispunite obrazac i osigurajte svoje mjesto!"
   },
   "maps": {
     "mainTitle": "LOKACIJA"
@@ -146,7 +195,7 @@
         "description": "• Do 15 godina"
       },
       "adultCreatives": {
-        "title": "Odrasli Kreativci",
+        "title": "Seniori Kreativci",
         "description1": "• Od 15 godina na dalje",
         "description2": "• Intenzivniji program",
         "description3": "• Prethodno znanje je preporučeno, ali nije obavezno"

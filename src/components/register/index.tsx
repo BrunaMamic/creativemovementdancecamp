@@ -6,9 +6,10 @@ import styles from "./styles.module.scss";
 import PhoneNumberInput from "./phoneInput";
 import { ChevronDown } from "lucide-react";
 import { Link } from "@/i18n/routing";
+import {useTranslations} from "next-intl";
 
 export const Register = () => {
-  // const t = useTranslations("contact");
+  const t = useTranslations("contact");
   const [success, setSuccess] = useState(0);
 
   const [formData, setFormData] = useState({
@@ -175,8 +176,8 @@ export const Register = () => {
             id="contact-form">
             <div className={styles.mainTitle}>
               <div className={styles.text}>
-                We’d love to hear from you. Please provide your details, and our
-                team will reach out as soon as possible.
+                {t('textRegister')}
+
               </div>
             </div>
             <div className={styles.row}>
@@ -188,7 +189,7 @@ export const Register = () => {
                   type="text"
                   id="Name"
                   name="name"
-                  placeholder="Full Name"
+                  placeholder={t('name')}
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -203,7 +204,7 @@ export const Register = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder={t('email')}
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -231,7 +232,7 @@ export const Register = () => {
                   type="text"
                   id="birthday"
                   name="birthday"
-                  placeholder="Date of birth 'dd/mm/yyyy'"
+                  placeholder={t('date')}
                   value={formData.birthday}
                   onChange={(e) =>
                     setFormData({ ...formData, birthday: e.target.value })
@@ -248,7 +249,7 @@ export const Register = () => {
                   type="text"
                   id="Category"
                   name="Category"
-                  placeholder="Select category"
+                  placeholder={t('category')}
                   value={formData.category}
                   onClick={toggleDropdown}
                   readOnly
@@ -280,7 +281,7 @@ export const Register = () => {
                   type="text"
                   id="package"
                   name="package"
-                  placeholder="Select package"
+                  placeholder={t('package')}
                   value={selectedPackage}
                   onClick={() => setPackageDropdownOpen((prev) => !prev)}
                   readOnly
@@ -316,7 +317,7 @@ export const Register = () => {
                 <textarea
                   id="description"
                   name="description"
-                  placeholder="What is your question?"
+                  placeholder={t('registerDescription')}
                   maxLength={1000}
                   value={formData.description}
                   onChange={(e) =>
@@ -335,13 +336,13 @@ export const Register = () => {
                     onChange={(e) => setTermsAccepted(e.target.checked)}
                   />
                   <label htmlFor="terms">
-                    By registering you accept{" "}
+                    {t('terms1')}
                     <Link
                       href="/terms-and-conditions"
-                      className={styles.termsLink}>
-                      terms and conditions
+                      className={styles.termsLink} style={{margin: '0 5px'}}>
+                      {t('termsLink')}
                     </Link>{" "}
-                    of Creative Movement Dance Camp
+                    {t('terms2')}
                   </label>
                 </div>
                 {success === 1 ? (
@@ -384,7 +385,7 @@ export const Register = () => {
                         termsAccepted
                       )
                     }>
-                    Send a message
+                    {t('button')}
                   </button>
                 )}
               </div>
