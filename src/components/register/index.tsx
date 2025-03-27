@@ -29,13 +29,11 @@ export const Register = () => {
   const creativeJuniors = [
     "MOVE FULL OUT - 150€",
     "DANCE, SLEEP, REPEAT - 350€",
-    "EARLY BIRD PASS - 100€",
   ];
 
   const creativeAdults = [
     "MOVE FULL OUT - 290€",
     "DANCE, SLEEP, REPEAT - 490€",
-    "EARLY BIRD PASS - 240€",
     "BATTLE MOVERS -190€",
     "MOVE ONE DAY - 90€",
   ];
